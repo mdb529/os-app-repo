@@ -1,0 +1,265 @@
+DRUG_NAME,NDC_CODE,HCPCS_CODE,MANUFACTURER_NAME,ROUTE_TYPE,CPT_DOSAGE,NUMERATOR_STRENGTH,CPT_MBU,MBUS_PER_PACKAGE,PACKAGE_QTY,MBUS_PER_NDC,UNITS_OF_SERVICE
+Abraxane,68817-0134-50,J9264,Celgene,IV,1 MG,100,1,100,1,100,100
+Alimta,00002-7623-01,J9305,Eli Lilly and Company,IV,10 MG,500,10,50,1,50,500
+Alimta,00002-7640-01,J9305,Eli Lilly and Company,IV,10 MG,100,10,10,1,10,100
+Aranesp,55513-0002-04,J0881,Amgen,IV,1 MCG,25,1,25,4,100,100
+Aranesp,55513-0002-04,J0882,Amgen,IV,1 MCG,25,1,25,4,100,100
+Aranesp,55513-0003-04,J0882,Amgen,IV,1 MCG,40,1,40,4,160,160
+Aranesp,55513-0003-04,J0881,Amgen,IV,1 MCG,40,1,40,4,160,160
+Aranesp,55513-0004-04,J0881,Amgen,IV,1 MCG,60,1,60,4,240,240
+Aranesp,55513-0004-04,J0882,Amgen,IV,1 MCG,60,1,60,4,240,240
+Aranesp,55513-0005-04,J0882,Amgen,IV,1 MCG,100,1,100,4,400,400
+Aranesp,55513-0005-04,J0881,Amgen,IV,1 MCG,100,1,100,4,400,400
+Aranesp,55513-0006-01,J0881,Amgen,IV,1 MCG,200,1,200,1,200,200
+Aranesp,55513-0006-01,J0882,Amgen,IV,1 MCG,200,1,200,1,200,200
+Aranesp,55513-0021-04,J0882,Amgen,IV,1 MCG,40,1,40,1,160,160
+Aranesp,55513-0021-04,J0881,Amgen,IV,1 MCG,40,1,40,1,160,160
+Aranesp,55513-0023-04,J0881,Amgen,IV,1 MCG,60,1,60,1,240,240
+Aranesp,55513-0023-04,J0882,Amgen,IV,1 MCG,60,1,60,1,240,240
+Aranesp,55513-0025-04,J0882,Amgen,IV,1 MCG,100,1,100,1,400,400
+Aranesp,55513-0025-04,J0881,Amgen,IV,1 MCG,100,1,100,1,400,400
+Aranesp,55513-0027-04,J0881,Amgen,IV,1 MCG,150,1,150,1,600,600
+Aranesp,55513-0027-04,J0882,Amgen,IV,1 MCG,150,1,150,1,600,600
+Aranesp,55513-0028-01,J0882,Amgen,IV,1 MCG,200,1,200,1,200,200
+Aranesp,55513-0028-01,J0881,Amgen,IV,1 MCG,200,1,200,1,200,200
+Aranesp,55513-0032-01,J0881,Amgen,IV,1 MCG,500,1,500,1,500,500
+Aranesp,55513-0032-01,J0882,Amgen,IV,1 MCG,500,1,500,1,500,500
+Aranesp,55513-0057-04,J0882,Amgen,IV,1 MCG,25,1,25,1,100,100
+Aranesp,55513-0057-04,J0881,Amgen,IV,1 MCG,25,1,25,1,100,100
+Aranesp,55513-0098-04,J0881,Amgen,IV,1 MCG,10,1,10,1,40,40
+Aranesp,55513-0098-04,J0882,Amgen,IV,1 MCG,10,1,10,1,40,40
+Aranesp,55513-0110-01,J0882,Amgen,IV,1 MCG,300,1,300,1,300,300
+Aranesp,55513-0110-01,J0881,Amgen,IV,1 MCG,300,1,300,1,300,300
+Aranesp,55513-0111-01,J0881,Amgen,IV,1 MCG,300,1,300,1,300,300
+Aranesp,55513-0111-01,J0882,Amgen,IV,1 MCG,300,1,300,1,300,300
+Avastin,50242-0060-01,J9035,Genentech,IV,10 MG,100,10,10,1,10,100
+Avastin,50242-0060-10,J9035,Genentech,IV,10 MG,100,10,10,10,100,1000
+Avastin,50242-0061-01,J9035,Genentech,IV,10 MG,400,10,40,1,40,400
+Avastin,50242-0061-10,J9035,Genentech,IV,10 MG,400,10,40,10,400,4000
+Belrapzo,42367-0521-25,J9036,Eagle Pharmaceuticals,IV,1 MG,100,1,100,1,100,100
+Bendeka,63459-0348-04,J9034,Teva,IV,1 MG,25,1,100,1,100,100
+Cinvanti,47426-0201-01,J0185,Heron Therapeutics,IV,1 MG,130,1,130,1,130,130
+Cyramza,00002-7669-01,J9308,Eli Lilly and Company,IV,5 MG,10,5,20,1,20,100
+Cyramza,00002-7678-01,J9308,Eli Lilly and Company,IV,5 MG,10,5,100,1,100,500
+Darzalex,57894-0502-05,J9145,Janssen,IV,10 MG,100,10,10,1,10,100
+Darzalex,57894-0502-20,J9145,Janssen,IV,10 MG,100,10,40,1,40,400
+Elitek,00024-5150-10,J2783,Sanofi,IV,0.5 MG,0,0.5,3,3,9,4.5
+Elitek,00024-5151-75,J2783,Sanofi,IV,0.5 MG,0,0.5,15,1,15,7.5
+Erbitux,66733-0948-23,J9055,Eli Lilly and Company,IV,10 MG,2,10,10,1,10,100
+Erbitux,66733-0958-23,J9055,Eli Lilly and Company,IV,10 MG,2,10,20,1,20,200
+Feraheme,59338-0775-01,Q0139,AMAG Pharmaceuticals,IV,1 MG,510,1,510,1,510,510
+Feraheme,59338-0775-01,Q0138,AMAG Pharmaceuticals,IV,1 MG,510,1,510,1,510,510
+Feraheme,59338-0775-10,Q0139,AMAG Pharmaceuticals,IV,1 MG,510,1,510,10,5100,5100
+Feraheme,59338-0775-10,Q0138,AMAG Pharmaceuticals,IV,1 MG,510,1,510,10,5100,5100
+Granix,63459-0910-11,J1447,Teva,IV,1 MCG,300,1,300,1,300,300
+Granix,63459-0910-15,J1447,Teva,IV,1 MCG,300,1,300,10,3000,3000
+Granix,63459-0910-17,J1447,Teva,IV,1 MCG,300,1,300,1,300,300
+Granix,63459-0910-36,J1447,Teva,IV,1 MCG,300,1,300,5,1500,1500
+Granix,63459-0912-11,J1447,Teva,IV,1 MCG,480,1,480,1,480,480
+Granix,63459-0912-15,J1447,Teva,IV,1 MCG,480,1,480,10,4800,4800
+Granix,63459-0912-17,J1447,Teva,IV,1 MCG,480,1,480,1,480,480
+Granix,63459-0912-36,J1447,Teva,IV,1 MCG,480,1,480,5,2400,2400
+Granix,63459-0918-59,J1447,Teva,IV,1 MCG,300,1,300,10,3000,3000
+Granix,63459-0920-59,J1447,Teva,IV,1 MCG,480,1,480,10,4800,4800
+Halaven,62856-0389-01,J9179,Eisai Inc.,IV,0.1 MG,0.5,0.1,10,1,10,1
+Herceptin,50242-0132-01,J9355,Genentech,IV,10 MG,150,10,15,1,15,150
+Herceptin,50242-0132-10,J9355,Genentech,IV,10 MG,150,10,15,10,150,1500
+Herceptin,50242-0134-68,J9355,Genentech,IV,10 MG,0,10,44,1,44,440
+Herceptin,50242-0333-01,,Genentech,IV,,0,,,1,,
+Injectafer,00517-0650-01,J1439,"American Regent, Inc.",IV,1 MG,50,1,750,1,750,750
+Injectafer,00517-0650-02,J1439,"American Regent, Inc.",IV,1 MG,50,1,750,2,1500,1500
+Jevtana,00024-5824-11,J9043,Sanofi,IV,1 MG,0,1,60,1,60,60
+Kanjinti,55513-0132-01,Q5117,Amgen,IV,10 MG,420,10,42,1,42,420
+Kyprolis,76075-0101-01,J9047,Amgen,IV,1 MG,60,1,60,1,60,60
+Kyprolis,76075-0102-01,J9047,Amgen,IV,1 MG,30,1,30,1,30,30
+Kyprolis,76075-0103-01,J9047,Amgen,IV,1 MG,10,1,10,1,10,10
+Mvasi,55513-0206-01,Q5107,Amgen,IV,10 MG,100,10,10,1,10,100
+Mvasi,55513-0207-01,Q5107,Amgen,IV,10 MG,400,10,40,1,40,400
+Neulasta,55513-0190-01,J2505,Amgen,IV,6 MG,6,6,1,1,1,6
+Neulasta,55513-0192-01,J2505,Amgen,IV,6 MG,0,6,1,1,1,6
+Neupogen,55513-0209-10,J1442,Amgen,IV,1 MCG,480,1,480,10,4800,4800
+Neupogen,55513-0209-91,J1442,Amgen,IV,1 MCG,480,1,480,0.8,480,480
+Neupogen,55513-0530-10,J1442,Amgen,IV,1 MCG,300,1,300,10,3000,3000
+Neupogen,55513-0546-10,J1442,Amgen,IV,1 MCG,480,1,480,10,4800,4800
+Neupogen,55513-0924-10,J1442,Amgen,IV,1 MCG,300,1,300,10,3000,3000
+Neupogen,55513-0924-91,J1442,Amgen,IV,1 MCG,300,1,300,0.5,300,300
+Procrit,59676-0302-01,Q4081,Janssen,IV,100 UNITS,2000,100,20,6,120,12000
+Procrit,59676-0302-01,J0885,Janssen,IV,1000 UNITS,2000,1000,2,6,12,12000
+Procrit,59676-0303-01,Q4081,Janssen,IV,100 UNITS,3000,100,30,6,180,18000
+Procrit,59676-0303-01,J0885,Janssen,IV,1000 UNITS,3000,1000,3,6,18,18000
+Procrit,59676-0304-01,Q4081,Janssen,IV,100 UNITS,4000,100,40,6,240,24000
+Procrit,59676-0304-01,J0885,Janssen,IV,1000 UNITS,4000,1000,4,6,24,24000
+Procrit,59676-0310-01,Q4081,Janssen,IV,100 UNITS,10000,100,100,6,600,60000
+Procrit,59676-0310-01,J0885,Janssen,IV,1000 UNITS,10000,1000,10,6,60,60000
+Procrit,59676-0310-02,Q4081,Janssen,IV,100 UNITS,10000,100,100,25,2500,250000
+Procrit,59676-0310-02,J0885,Janssen,IV,1000 UNITS,10000,1000,10,25,250,250000
+Procrit,59676-0312-04,Q4081,Janssen,IV,100 UNITS,10000,100,200,4,800,80000
+Procrit,59676-0312-04,J0885,Janssen,IV,1000 UNITS,10000,1000,20,4,80,80000
+Procrit,59676-0320-04,Q4081,Janssen,IV,100 UNITS,20000,100,200,4,800,80000
+Procrit,59676-0320-04,J0885,Janssen,IV,1000 UNITS,20000,1000,20,4,80,80000
+Procrit,59676-0340-01,Q4081,Janssen,IV,100 UNITS,40000,100,400,4,1600,160000
+Procrit,59676-0340-01,J0885,Janssen,IV,1000 UNITS,40000,1000,40,4,160,160000
+Rituxan,50242-0051-10,J9312,Genentech,IV,10 MG,10,10,10,10,100,1000
+Rituxan,50242-0051-21,J9310,Genentech,IV,100 MG,10,100,1,1,1,100
+Rituxan,50242-0051-21,J9312,Genentech,IV,10 MG,10,10,10,1,10,100
+Rituxan,50242-0053-06,J9312,Genentech,IV,10 MG,10,10,50,1,50,500
+Rituxan,50242-0053-06,J9310,Genentech,IV,100 MG,10,100,5,1,5,500
+Rituxan Hycela,50242-0108-01,J9311,Genentech,IV,10 MG,2400,10,140,1,140,1400
+Rituxan Hycela,50242-0108-86,,Genentech,IV,,2400,,,1,,
+Rituxan Hycela,50242-0109-01,J9311,Genentech,IV,10 MG,2400,10,160,1,160,1600
+Somatuline Depot,15054-1060-03,J1930,Ipsen Pharma,IV,1 MG,60,1,60,1,60,60
+Somatuline Depot,15054-1060-04,,Ipsen Pharma,IV,,60,,,1,,
+Somatuline Depot,15054-1090-03,J1930,Ipsen Pharma,IV,1 MG,90,1,90,1,90,90
+Somatuline Depot,15054-1090-04,,Ipsen Pharma,IV,,90,,,1,,
+Somatuline Depot,15054-1120-03,J1930,Ipsen Pharma,IV,1 MG,120,1,120,1,120,120
+Somatuline Depot,15054-1120-04,,Ipsen Pharma,IV,,120,,,1,,
+Sustol,47426-0101-06,J1627,Heron Therapeutics,IV,0.1 MG,10,0.1,100,6,600,60
+Tecentriq,50242-0917-01,J9022,Genentech,IV,10 MG,1200,10,120,1,120,1200
+Tecentriq,50242-0917-86,,Genentech,IV,,1200,,,1,,
+Tecentriq,50242-0918-01,J9022,Genentech,IV,10 MG,840,10,84,1,84,840
+Tecentriq,50242-0918-86,,Genentech,IV,,840,,,1,,
+Treanda,63459-0390-08,J9033,Teva,IV,1 MG,25,1,25,1,25,25
+Treanda,63459-0391-20,J9033,Teva,IV,1 MG,100,1,100,1,100,100
+Udenyca,70114-0101-01,Q5111,Coherus BioSciences,IV,0.5 MG,6,0.5,12,1,12,6
+Udenyca,70114-0101-01,Q5111,Coherus BioSciences,IV,0.5 MG,6,0.5,12,1,12,6
+Vectibix,55513-0954-01,J9303,Amgen,IV,10 MG,100,10,10,1,10,100
+Vectibix,55513-0956-01,J9303,Amgen,IV,10 MG,400,10,40,1,40,400
+Velcade,63020-0049-01,J9041,Takeda,IV,0.1 MG,3.5,0.1,35,1,35,3.5
+Xgeva,55513-0730-01,J0897,Amgen,IV,1 MG,120,1,120,1,120,120
+Zarxio,61314-0304-01,Q5101,Sandoz,IV,1 MCG,300,1,300,1,300,300
+Zarxio,61314-0304-10,Q5101,Sandoz,IV,1 MCG,300,1,300,2,3000,3000
+Zarxio,61314-0312-01,Q5101,Sandoz,IV,1 MCG,480,1,480,1,480,480
+Zarxio,61314-0312-10,Q5101,Sandoz,IV,1 MCG,480,1,480,2,4800,4800
+Zarxio,61314-0318-01,Q5101,Sandoz,IV,1 MCG,300,1,300,1,300,300
+Zarxio,61314-0318-10,Q5101,Sandoz,IV,1 MCG,300,1,300,2,3000,3000
+Zarxio,61314-0326-01,Q5101,Sandoz,IV,1 MCG,480,1,480,1,480,480
+Zarxio,61314-0326-10,Q5101,Sandoz,IV,1 MCG,480,1,480,2,4800,4800
+Bosulif,00069-0135-01,,Pfizer,Oral,,100,,,120,,1
+Bosulif,00069-0136-01,,Pfizer,Oral,,500,,,30,,1
+Bosulif,00069-0193-01,,Pfizer,Oral,,400,,,30,,1
+Bosulif,63539-0117-01,,Pfizer,Oral,,100,,,120,,1
+Braftovi,70255-0020-01,,Array BioPharma,Oral,,50,,,2,,1
+Braftovi,70255-0025-01,,Array BioPharma,Oral,,75,,,2,,1
+Braftovi,70255-0025-03,,Array BioPharma,Oral,,75,,,2,,1
+Cabometyx,42388-0023-26,,Exelixis,Oral,,60,,,30,,1
+Cabometyx,42388-0023-36,,Exelixis,Oral,,60,,,30,,1
+Cabometyx,42388-0023-37,,Exelixis,Oral,,60,,,15,,1
+Cabometyx,42388-0024-26,,Exelixis,Oral,,20,,,30,,1
+Cabometyx,42388-0024-37,,Exelixis,Oral,,20,,,15,,1
+Cabometyx,42388-0025-26,,Exelixis,Oral,,40,,,30,,1
+Cabometyx,42388-0025-37,,Exelixis,Oral,,40,,,15,,1
+Calquence,00310-0512-28,,Astrazeneca,Oral,,100,,,28,,1
+Calquence,00310-0512-28,,Astrazeneca,Oral,,100,,,28,,1
+Calquence,00310-0512-60,,Astrazeneca,Oral,,100,,,60,,1
+Copiktra,71779-0115-01,,Verastem,Oral,,15,,,56,,1
+Copiktra,71779-0115-02,,Verastem,Oral,,15,,,2,,1
+Copiktra,71779-0125-01,,Verastem,Oral,,25,,,56,,1
+Copiktra,71779-0125-02,,Verastem,Oral,,25,,,1,,1
+Erleada,59676-0600-12,,Janssen,Oral,,60,,,120,,1
+Erleada,59676-0600-56,,Janssen,Oral,,60,,,2,,1
+Erleada,59676-0600-99,,Janssen,Oral,,60,,,120,,1
+Fareston,42747-0327-30,,Kyowa Kirin,Oral,,60,,,30,,1
+Fareston,42747-0327-72,,Kyowa Kirin,Oral,,60,,,7,,1
+Gilotrif,00597-0137-30,,Boehringer Ingelheim,Oral,,30,,,1,,1
+Gilotrif,00597-0137-90,,Boehringer Ingelheim,Oral,,30,,,1,,1
+Gilotrif,00597-0137-90,,Boehringer Ingelheim,Oral,,30,,,1,,1
+Gilotrif,00597-0138-30,,Boehringer Ingelheim,Oral,,40,,,1,,1
+Gilotrif,00597-0138-95,,Boehringer Ingelheim,Oral,,40,,,1,,1
+Gilotrif,00597-0141-30,,Boehringer Ingelheim,Oral,,20,,,1,,1
+Ibrance,00069-0187-21,,Pfizer,Oral,,75,,,21,,1
+Ibrance,00069-0188-21,,Pfizer,Oral,,100,,,21,,1
+Ibrance,00069-0189-21,,Pfizer,Oral,,125,,,21,,1
+Ibrance,63539-0187-11,,Pfizer,Oral,,75,,,21,,1
+Ibrance,63539-0188-11,,Pfizer,Oral,,100,,,21,,1
+Ibrance,63539-0189-11,,Pfizer,Oral,,125,,,21,,1
+Imbruvica,57962-0014-28,,Pharmacyclics,Oral,,140,,,1,,1
+Imbruvica,57962-0070-28,,Pharmacyclics,Oral,,70,,,28,,1
+Imbruvica,57962-0140-09,,Pharmacyclics,Oral,,140,,,90,,1
+Imbruvica,57962-0140-12,,Pharmacyclics,Oral,,140,,,120,,1
+Imbruvica,57962-0280-28,,Pharmacyclics,Oral,,280,,,1,,1
+Imbruvica,57962-0420-28,,Pharmacyclics,Oral,,420,,,1,,1
+Imbruvica,57962-0420-71,,Pharmacyclics,Oral,,420,,,1,,1
+Imbruvica,57962-0560-28,,Pharmacyclics,Oral,,560,,,1,,1
+Imbruvica,57962-0560-71,,Pharmacyclics,Oral,,560,,,1,,1
+Inlyta,00069-0145-01,,Pfizer,Oral,,1,,,180,,1
+Inlyta,00069-0151-11,,Pfizer,Oral,,5,,,60,,1
+Inlyta,63539-0026-01,,Pfizer,Oral,,1,,,90,,1
+Inlyta,63539-0044-01,,Pfizer,Oral,,5,,,60,,1
+Inlyta,63539-0044-02,,Pfizer,Oral,,5,,,30,,1
+Kisqali,00078-0860-01,,Novartis,Oral,,200,,,1,,1
+Kisqali,00078-0867-42,,Novartis,Oral,,200,,,3,,1
+Kisqali,00078-0874-63,,Novartis,Oral,,200,,,3,,1
+Lenvima,62856-0704-30,,Eisai Inc.,Oral,,4,,,6,,1
+Lenvima,62856-0708-30,,Eisai Inc.,Oral,,4,,,6,,1
+Lenvima,62856-0710-30,,Eisai Inc.,Oral,,10,,,6,,1
+Lenvima,62856-0712-30,,Eisai Inc.,Oral,,4,,,6,,1
+Lenvima,62856-0714-30,,Eisai Inc.,Oral,,0,,,6,,1
+Lenvima,62856-0718-30,,Eisai Inc.,Oral,,0,,,6,,1
+Lenvima,62856-0720-30,,Eisai Inc.,Oral,,10,,,6,,1
+Lenvima,62856-0724-30,,Eisai Inc.,Oral,,0,,,6,,1
+Lynparza,00310-0657-58,,Astrazeneca,Oral,,50,,,112,,1
+Lynparza,00310-0668-12,,Astrazeneca,Oral,,100,,,120,,1
+Lynparza,00310-0668-60,,Astrazeneca,Oral,,100,,,60,,1
+Lynparza,00310-0679-12,,Astrazeneca,Oral,,150,,,120,,1
+Lynparza,00310-0679-60,,Astrazeneca,Oral,,150,,,60,,1
+Lynparza,00310-0679-95,,Astrazeneca,Oral,,150,,,60,,1
+Mektovi,70255-0010-02,,Array BioPharma,Oral,,15,,,1,,1
+Mektovi,70255-0010-03,,Array BioPharma,Oral,,15,,,90,,1
+Nerlynx,70437-0240-18,,Puma Biotechnology,Oral,,40,,,1,,1
+Nerlynx,70437-0240-26,,Puma Biotechnology,Oral,,40,,,1,,1
+Nexavar,50419-0488-58,,Bayer,Oral,,200,,,120,,1
+Ninlaro,63020-0078-02,,Takeda,Oral,,2.3,,,3,,1
+Ninlaro,63020-0079-02,,Takeda,Oral,,3,,,3,,1
+Ninlaro,63020-0080-02,,Takeda,Oral,,4,,,3,,1
+Nubeqa,50419-0395-01,,Bayer,Oral,,300,,,1,,1
+Odomzo,47335-0303-83,,Sun Pharmaceuticals,Oral,,200,,,30,,1
+Rubraca,69660-0201-91,,Clovis Oncology,Oral,,200,,,60,,1
+Rubraca,69660-0202-91,,Clovis Oncology,Oral,,250,,,60,,1
+Rubraca,69660-0203-91,,Clovis Oncology,Oral,,300,,,60,,1
+Sancuso,42747-0726-01,,Kyowa Kirin,Oral,,3.1,,,1,,1
+Stivarga,50419-0171-00,,Bayer,Oral,,40,,,210,,1
+Stivarga,50419-0171-03,,Bayer,Oral,,40,,,3,,1
+Stivarga,50419-0171-04,,Bayer,Oral,,40,,,1,,1
+Sutent,00069-0550-38,,Pfizer,Oral,,12.5,,,28,,1
+Sutent,00069-0770-38,,Pfizer,Oral,,25,,,28,,1
+Sutent,00069-0830-38,,Pfizer,Oral,,37.5,,,28,,1
+Sutent,00069-0980-38,,Pfizer,Oral,,50,,,28,,1
+Tagrisso,00310-1349-30,,Astrazeneca,Oral,,40,,,30,,1
+Tagrisso,00310-1350-30,,Astrazeneca,Oral,,80,,,30,,1
+Talzenna,00069-0296-30,,Pfizer,Oral,,0.25,,,30,,1
+Talzenna,00069-0296-30,,Pfizer,Oral,,0.25,,,30,,1
+Talzenna,00069-1195-30,,Pfizer,Oral,,1,,,30,,1
+Talzenna,00069-1195-30,,Pfizer,Oral,,1,,,30,,1
+Talzenna,63539-0295-30,,Pfizer,Oral,,1,,,30,,1
+Tarceva,50242-0062-01,,Genentech,Oral,,25,,,30,,1
+Tarceva,50242-0063-01,,Genentech,Oral,,100,,,30,,1
+Tarceva,50242-0064-01,,Genentech,Oral,,150,,,30,,1
+Varubi,69656-0101-02,J8670,TerSera,Oral,1 MG,90,1,180,2,180,1
+Varubi,69656-0102-10,,TerSera,Oral,,1.8,,,1,,1
+Varubi,70720-0101-02,,TerSera,Oral,,90,,,2,,1
+Venclexta,00074-0561-11,,AbbVie,Oral,,10,,,1,,1
+Venclexta,00074-0561-14,,AbbVie,Oral,,10,,,1,,1
+Venclexta,00074-0566-07,,AbbVie,Oral,,50,,,1,,1
+Venclexta,00074-0566-11,,AbbVie,Oral,,50,,,1,,1
+Venclexta,00074-0576-11,,AbbVie,Oral,,100,,,1,,1
+Venclexta,00074-0576-22,,AbbVie,Oral,,100,,,120,,1
+Venclexta,00074-0576-34,,AbbVie,Oral,,100,,,1,,1
+Venclexta,00074-0576-34,,AbbVie,Oral,,100,,,1,,1
+Venclexta,00074-0579-28,,AbbVie,Oral,,0,,,1,,1
+Verzenio,00002-4483-54,,Eli Lilly and Company,Oral,,50,,,1,,1
+Verzenio,00002-4815-54,,Eli Lilly and Company,Oral,,100,,,1,,1
+Verzenio,00002-5337-54,,Eli Lilly and Company,Oral,,150,,,1,,1
+Verzenio,00002-6216-54,,Eli Lilly and Company,Oral,,200,,,1,,1
+Vizimpro,00069-0197-30,,Pfizer,Oral,,15,,,30,,1
+Vizimpro,00069-0197-30,,Pfizer,Oral,,15,,,30,,1
+Vizimpro,00069-1198-30,,Pfizer,Oral,,30,,,30,,1
+Vizimpro,00069-1198-30,,Pfizer,Oral,,30,,,30,,1
+Vizimpro,00069-2299-30,,Pfizer,Oral,,45,,,30,,1
+Vizimpro,00069-2299-30,,Pfizer,Oral,,45,,,30,,1
+Vizimpro,63539-0197-90,,Pfizer,Oral,,15,,,90,,1
+Xtandi,00469-0125-99,,Astellas Pharma,Oral,,40,,,1,,1
+Zejula,69656-0103-30,,Tesaro,Oral,,100,,,30,,1
+Zejula,69656-0103-90,,Tesaro,Oral,,100,,,90,,1
+Zytiga,57894-0150-12,,Janssen,Oral,,250,,,120,,1
+Zytiga,57894-0195-06,,Janssen,Oral,,500,,,60,,1
+Zytiga,57894-0195-15,,Janssen,Oral,,500,,,60,,1
