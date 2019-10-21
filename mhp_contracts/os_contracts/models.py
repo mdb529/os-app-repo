@@ -14,28 +14,35 @@ class Manufacturer(models.Model):
 
 
 class Drug(models.Model):
-    class Meta:
-        unique_together = ('ndc_code', 'hcpcs_code')
-
-    ndc_code= models.CharField(max_length=13)
-    name= models.CharField(max_length=100)
-    hcpcs_code= models.CharField(max_length=5,blank=True, null=True)
+    
+    name= models.CharField(max_length=100, unique=True)
     manufacturer= models.ForeignKey(Manufacturer, on_delete=models.CASCADE, to_field='name',related_name='drugs')
     route_type= models.CharField(max_length=10,blank=True, null=True)
     cpt_dosage= models.CharField(max_length=100,blank=True, null=True)
-    numerator_strength= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
-    cpt_mbu= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
-    mbus_per_package= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
-    package_qty= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
-    mbus_per_ndc= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
-    units_of_service= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
 
 
     def __str__(self):
         return f"{self.name}"
 
+class NDC(models.Model):
+    class Meta:
+        verbose_name = 'NDC'
+        verbose_name_plural = 'NDCs'
+        unique_together = ('ndc_code', 'hcpcs_code')
 
+    name = models.ForeignKey(Drug, on_delete=models.CASCADE, to_field='name', related_name='ndcs')
+    ndc_code= models.CharField(max_length=13)
+    hcpcs_code= models.CharField(max_length=5,blank=True, null=True)
+    numerator_strength= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
+    cpt_mbu= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
+    mbus_per_package= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
+    package_qty= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
+    mbus_per_ndc= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
+    units_of_service = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.name} | {self.ndc_code} | {self.numerator_strength}"
+    
 # class Contract(models.Model):
 
 #     CONTRACT_TYPES = (

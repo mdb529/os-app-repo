@@ -4,8 +4,7 @@ from os_contracts.models import Drug,Manufacturer
 
 def run():
 
-    
-    Drug.objects.all().delete()
+    Manufacturer.objects.all().delete()
     df = pd.read_csv('os_contracts/temp/manufacturers.csv')
     df = df.fillna(0)
     df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('(', '').str.replace(')','').str.replace('#', 'number')
