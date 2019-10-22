@@ -1,0 +1,28 @@
+{% extends "os_contracts/base.html" %}
+
+{% block head %}
+<title>{% block title %}Drugs{% endblock %}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="text-align:center;">
+<h1>Drugs</h1>
+    <div class="row">
+    {% for drug in drugs %}
+        <div class="col s4">
+            <div class="card small blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px;">
+                    <span class="card-title">{{ drug.name }}</span>
+                    <p>{{ drug.manufacturer }}</p>
+                    <p>{{ drug.route_type }}</p>
+                    <p>{{ drug.cpt_dosage }}</p>
+
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+<br>
+</div>
+<a href="{% url 'manufacturers' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to Manufacturers Page</a>
+{% endblock %}

@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'os_contracts.urls'
+ROOT_URLCONF = 'mhp_contracts.urls'
 
 TEMPLATES = [
     {
@@ -69,6 +69,10 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
 WSGI_APPLICATION = 'mhp_contracts.wsgi.application'
 
 
@@ -85,13 +89,6 @@ DATABASES = {
         'PORT':'5432',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 
 # Password validation
