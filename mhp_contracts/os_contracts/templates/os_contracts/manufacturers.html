@@ -20,7 +20,7 @@
                     {% endif %}
                 </div>
             </div>
-            <a class="blue-grey darken-4 btn-small" style="margin: 5px;">View Manufacturer</a>
+            <a href="{% url 'single_manufacturer' slug=manufacturer.slug %}" class="blue-grey darken-4 btn-small" style="margin: 5px;">View Manufacturer</a>
         </div>
     {% endfor %}
     </div>

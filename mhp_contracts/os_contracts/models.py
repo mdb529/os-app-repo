@@ -3,11 +3,17 @@ from django.contrib.postgres.fields import JSONField
 import json 
 from pprint import pprint
 from django.core.files.storage import FileSystemStorage
+from django.utils.text import slugify
 
 
 class Manufacturer(models.Model):
-    name= models.CharField(max_length=50,unique=True)
+    name = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField()
     logo_img= models.ImageField(upload_to="logos/",blank=True,null=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Manufacturer, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.name}"
@@ -15,11 +21,16 @@ class Manufacturer(models.Model):
 
 class Drug(models.Model):
     
-    name= models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField()
     manufacturer= models.ForeignKey(Manufacturer, on_delete=models.CASCADE, to_field='name',related_name='drugs')
     route_type= models.CharField(max_length=10,blank=True, null=True)
     cpt_dosage= models.CharField(max_length=100,blank=True, null=True)
 
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Drug, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.name}"

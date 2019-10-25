@@ -24,9 +24,9 @@ def manufacturers(request):
     }
     return render(request, 'os_contracts/manufacturers.html',context)
 
-def single_manufacturer(request,manufacturer_name):
+def single_manufacturer(request,slug):
     try:
-        single_manufacturer = Manufacturer.objects.get(name=manufacturer_name)
+        single_manufacturer = Manufacturer.objects.get(slug=slug)
     except Manufacturer.DoesNotExist:
         raise Http404('Manufacturer does not exist.')
 

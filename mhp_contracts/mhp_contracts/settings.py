@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'data_loader.apps.DataLoaderConfig',
     'os_contracts.apps.OsContractsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
