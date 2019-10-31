@@ -1,0 +1,26 @@
+{% extends "os_contracts/base.html" %}
+
+{% block head %}
+<title>{% block title %}Transactions{% endblock %}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="text-align:center;">
+<h1>Transactions</h1>
+    <p>All Transactions Total = {{ at_total_dqty.delivered_quantity__sum }}</p>
+    <p>QTD Transactions Total = {{ qt_total_dqty.delivered_quantity__sum }}</p>
+    <div class="row">
+    {% for drug in drug_list %}
+        <div class="col s4">
+            <div class="card small blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px;">
+                    <span class="card-title">{{ drug.drug_name }}</span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<br>
+</div>
+<a href="{% url 'manufacturers' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to Manufacturers Page</a>
+{% endblock %}

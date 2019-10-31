@@ -13,7 +13,7 @@ def run():
 
     for idx,row in df.iterrows():
         n, created = NDC.objects.get_or_create(
-        name= Drug.objects.get(name__exact=row[0]),
+        drug_name= Drug.objects.get(name__exact=row[0]),
         ndc_code=row[1],
         hcpcs_code=row[2],
         numerator_strength=row[3],
@@ -21,7 +21,7 @@ def run():
         mbus_per_package=row[5],
         package_qty=row[6],
         mbus_per_ndc=row[7],
-        units_of_service=row[8]
+        ndc_unit_sum=row[8]
         )
         n.save()
         print(f'{n.ndc_code} was added to database...')

@@ -1,6 +1,6 @@
 import csv
 import pandas as pd
-from os_contracts.models import Drug,Manufacturer
+from os_contracts.models import Drug,Manufacturer,NDC,Contract
 
 def run():
 
