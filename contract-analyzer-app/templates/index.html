@@ -1,0 +1,16 @@
+{% extends "contract_analyzer/base.html" %}
+
+{% block title %}
+    Drugs
+{% endblock %}
+
+{% block body %}
+    <h1>Drug</h1>
+    <ul>
+        {% for drug in drugs %}
+        <li>
+            <a href="{% url 'drug' drug.drug_id %}">{{ drug.drug_id }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

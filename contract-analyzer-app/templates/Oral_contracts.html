@@ -1,0 +1,30 @@
+{% extends "contract_analyzer/base.html" %}
+
+{% block head %}
+<title>{% block title %}Oral Contracts{% endblock %}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="text-align:center;">
+<h1>Oral Contracts</h1>
+    <div class="row">
+    {% for Oral_contract in Oral_contracts %}
+        <div class="col s4">
+            <div class="card small blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px;">
+                    <span class="card-title">{{ Oral_contract.drug_name }}</span>
+                        <div class = "card-content activator">                  
+                            <p>{{ Oral_contract.manufacturer_name }}</p>
+                            <p>{{ Oral_contract.ndc_code }}</p>
+                            <p>{{ Oral_contract.numerator_strength }}</p>
+                         </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+<br>
+</div>
+<a href="{% url 'contract_drug_types' %}" class="black btn-small" style="position: fixed; bottom:50px; left: 0px; margin: 5px;">Go to Contract Type Page</a>
+<a href="{% url 'index' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to Drugs Page</a>
+{% endblock %}

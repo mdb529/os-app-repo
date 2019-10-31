@@ -1,0 +1,18 @@
+{% extends "contract_analyzer/base.html" %}
+
+{% block title %}
+    Drug {{ drug.drug_id }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>NDC: {{ drug.ndc_code }}</h1>
+    <h2>Manufacturer: <strong>{{ drug.manufacturer }}</strong></h2>
+    <ul>
+        <li>Drug Name: <strong>{{ drug.drug_name }}</strong></li>
+        <li>Manufacturer: <strong>{{ drug.manufacturer }}</strong></li>
+        <li>Route Type: <strong>{{ drug.route_type }}</strong></li>
+        <li>Units of Service <strong>{{ drug.units_of_service }}</strong></li>
+    </ul>
+    <a href="{% url 'index' %}">Back to Drugs Page</a>
+{% endblock%}

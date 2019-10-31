@@ -1,0 +1,27 @@
+{% extends "contract_analyzer/base.html" %}
+
+{% block head %}
+<title>{% block title %}Manufacturers{% endblock %}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="text-align:center;">
+<h1>Manufacturers</h1>
+    <div class="row">
+    {% for manufacturer in manufacturers %}
+        <div class="col s4">
+            <div class="card small blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px;">
+                    <span class="card-title">{{ manufacturer.manufacturer_name }}</span>
+                    <img class="circle responsive-img" src="{{ manufacturer.manufacturer_logo_img.url }}" />
+                </div>
+            </div>
+            <a class="blue-grey darken-4 btn-small" style="margin: 5px;">View Manufacturer</a>
+        </div>
+    {% endfor %}
+    </div>
+<br>
+</div>
+<a href="{% url 'contract_drug_types' %}" class="black btn-small" style="position: fixed; bottom:50px; left: 0px; margin: 5px;">Go to Contract Type Page</a>
+<a href="{% url 'index' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to Drugs Page</a>
+{% endblock %}

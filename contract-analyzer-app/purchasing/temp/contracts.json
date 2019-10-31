@@ -1,0 +1,165 @@
+{ 
+  "meta": {
+    "wholesaler":"Oncology Supply",
+    "effective_start":"2019-07-01",
+    "effective_end":"2019-09-30"
+  },
+  "contracts": [
+    {
+      "__type__":"Contract",
+      "drug_name": "Abraxane",
+      "drug_type":"IV",
+      "contract_type": "V",
+      "is_portfolio": false,
+      "is_rebate": true,
+      "is_discount": false,
+      "rebate_percentage_of": "net_sales",
+      "discount_percentage_of": null,
+      "baseline_start": "2017-10-01",
+      "baseline_end": "2018-09-30",
+      "baseline_measure": "AVG",
+      "measured_equivalents_qty": 100,
+      "measured_equivalents_units": "MG",
+      "rebate_tiers": [
+        {
+          "tier": 1,
+          "min": 0.1000,
+          "max": 0.1999,
+          "rebate": 0.02 
+        },
+        {
+          "tier": 2,
+          "min": 0.2000,
+          "max": 0.2999,
+          "rebate": 0.05
+        },
+        {
+          "tier": 3,
+          "min": 0.3000,
+          "max": 0.4999,
+          "rebate": 0.08
+        },
+        {
+          "tier": 4,
+          "min": 0.5000,
+          "max": 999999,
+          "rebate": 0.11
+        }
+      ]
+    },
+    {
+      "__type__":"Contract",
+      "drug_name": "Kanjinti",
+      "drug_type":"IV",
+      "contract_type": "MS",
+      "is_portfolio": false,
+      "is_rebate": true,
+      "is_discount": true,
+      "rebate_percentage_of": "net_sales",
+      "discount_percentage_of": null,
+      "baseline_start": "2017-10-01",
+      "baseline_end": "2018-09-30",
+      "baseline_measure": "AVG",
+      "measured_equivalents_qty": 100,
+      "measured_equivalents_units": "MG",
+      "rebate_tiers": [
+        {
+          "tier": 1,
+          "min": 0.1000,
+          "max": 0.1999,
+          "rebate": 0.02 
+        },
+        {
+          "tier": 2,
+          "min": 0.2000,
+          "max": 0.2999,
+          "rebate": 0.05
+        },
+        {
+          "tier": 3,
+          "min": 0.3000,
+          "max": 0.4999,
+          "rebate": 0.08
+        },
+        {
+          "tier": 4,
+          "min": 0.5000,
+          "max": 999999,
+          "rebate": 0.11
+        }
+      ]
+    },
+    {
+      "__type__":"Contract",
+      "drug_name": "Cyramza",
+      "drug_type":"IV",
+      "contract_type": "G",
+      "is_portfolio": true,
+      "is_rebate": true,
+      "is_discount": false,
+      "rebate_percentage_of": "net_sales",
+      "discount_percentage_of": null,
+      "baseline_start": "2017-10-01",
+      "baseline_end": "2018-09-30",
+      "baseline_measure": "AVG",
+      "measured_equivalents_qty": 100,
+      "measured_equivalents_units": "MG",
+      "rebate_tiers": [
+        {
+          "tier": 1,
+          "min": 0.0700,
+          "max": 0.1599,
+          "rebate": 0.01
+        },
+        {
+          "tier": 2,
+          "min": 0.1600,
+          "max": 0.2699,
+          "rebate": 0.02
+        },
+        {
+          "tier": 3,
+          "min": 0.2700,
+          "max": 999999,
+          "rebate": 0.03
+        }
+      ]
+    },
+    {
+      "__type__":"Contract",
+      "drug_name": "Avastin",
+      "drug_type":"IV",
+      "contract_type": "VG",
+      "is_portfolio": true,
+      "is_rebate": true,
+      "is_discount": true,
+      "rebate_percentage_of": "net_sales",
+      "discount_percentage_of": "WAC",
+      "baseline_start": "2018-07-01",
+      "baseline_end": "2018-09-30",
+      "baseline_measure": "AVG",
+      "measured_equivalents_qty": 100,
+      "measured_equivalents_units": "MG",
+      "rebate_tiers": [
+        {
+          "tier": 1,
+          "min": 0.07,
+          "max": 0.15,
+          "rebate": 0.01
+        },
+        {
+          "tier": 2,
+          "min": 0.07,
+          "max": 0.15,
+          "rebate": 0.02
+        },
+        {
+          "tier": 3,
+          "min": 0.07,
+          "max": 0.15,
+          "rebate": 0.03
+        }
+      ]
+    }
+  ]
+}

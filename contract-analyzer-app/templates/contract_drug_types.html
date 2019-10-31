@@ -1,0 +1,32 @@
+{% extends "contract_analyzer/base.html" %}
+
+{% block head %}
+<title>{% block title %}Contracts{% endblock %}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="text-align:center;">
+<h1>Contracts</h1>
+    <div class="row">
+        <div class="col s6">
+            <div class="card small blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px">
+                        <a href="{% url 'IV_contracts' %}" class="blue-grey darken-4 btn-large" style="margin: 5px;">
+                    <span class="card-title">IV</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="card small blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px">
+                        <a href="{% url 'Oral_contracts' %}" class="blue-grey darken-4 btn-large" style="margin: 5px;">
+                    <span class="card-title">ORAL</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+</div>
+<a href="{% url 'manufacturers' %}" class="black btn-small" style="position: fixed; bottom:50px; left: 0px; margin: 5px;">View Manufacturers</a>
+<a href="{% url 'index' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to Drugs Page</a>
+{% endblock %}
