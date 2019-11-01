@@ -51,7 +51,8 @@ def load_historical_purchases():
 def load_recent_purchases():
     print(f'========================== LOAD_RECENT_PURCHASES.PY ==========================')
 
-    df2 = pd.read_excel('purchasing/purchase_data/processed/processed_recent_purchases.xlsx',index_col=0)
+    # df2 = pd.read_excel('purchasing/purchase_data/processed/processed_recent_file.xlsx',index_col=0)
+    df2 = pd.read_excel('purchasing/purchase_data/processed/processed_combined_recent_purchases.xlsx',index_col=0)
     df2 = df2.fillna(0)
     df2.columns = df2.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('(', '').str.replace(')','').str.replace('#', 'number')
 

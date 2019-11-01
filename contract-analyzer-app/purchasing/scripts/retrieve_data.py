@@ -55,8 +55,8 @@ def loadData():
     app_fp = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
     fp = os.path.join(app_fp, 'purchase_data/raw/*')
     file_list = glob.glob(fp)
-    output_file_name = 'preprocessed_os_purchases.xlsx'
-    output_fp = os.path.join(app_fp, 'purchase_data/preprocessed/{0}'.format(output_file_name))
+    combined_output_file_name = 'preprocessed_combined_os_purchases.xlsx'
+    combined_output_fp = os.path.join(app_fp, 'purchase_data/preprocessed/{0}'.format(combined_output_file_name))
 
     appended_data = []
 
@@ -65,10 +65,20 @@ def loadData():
         df = pd.read_excel(in_file)
         print(f'Appending data...')
         appended_data.append(df)
+
     print(f'-- combining recent purchase data ---')
     appended_data_df = pd.concat(appended_data)
-    print(f'writing file "{output_file_name}"...')
-    appended_data_df.to_excel(output_fp)
+
+    print(f'writing combined file "{combined_output_file_name}"...')
+    appended_data_df.to_excel(combined_output_fp)
+
+    # for in_file in file_list[:-1]:
+    #     print(f'Recent file {in_file}...')
+    #     recent_df = pd.read_excel(in_file)
+    #     print(f'Writing Recent data...')
+    #     recent_df.to_excel(os.path.join(app_fp, 'purchase_data/preprocessed/recent_file.xlsx'))
+
+
     print(f'================== UPLOAD SUCCESSFUL! ==================')
 
 
@@ -77,6 +87,6 @@ def run():
     print(f'========================== LOAD_DATA.PY ==========================')
     print(f'------------------ retrieveEmail() ------------------')
     retrieveEmail()
-    print(f'------------------ processData() ------------------')
+    print(f'------------------ loadData() ------------------')
     loadData()
     print('=================== DONE ===================')

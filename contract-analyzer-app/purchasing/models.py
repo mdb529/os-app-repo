@@ -49,7 +49,8 @@ class Drug(models.Model):
     def q1(self):
         if self.ndcs:
             qtr_begin, qtr_end = (date(2019,1,1),date(2019,3,31))
-            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            drug_ps = Purchase.objects.filter(ndc_code__in=self.ndcs.all())
+            r = drug_ps.filter(invoice_date__range=[qtr_begin,qtr_end])
             return r
         return []
 
@@ -57,7 +58,8 @@ class Drug(models.Model):
     def q2(self):
         if self.ndcs:
             qtr_begin, qtr_end = (date(2019,4,1),date(2019,6,30))
-            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            drug_ps = Purchase.objects.filter(ndc_code__in=self.ndcs.all())
+            r =drug_ps.filter(invoice_date__range=[qtr_begin,qtr_end])
             return r
         return []
 
@@ -65,7 +67,8 @@ class Drug(models.Model):
     def q3(self):
         if self.ndcs:
             qtr_begin, qtr_end = (date(2019,7,1),date(2019,9,30))
-            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            drug_ps = Purchase.objects.filter(ndc_code__in=self.ndcs.all())
+            r = drug_ps.filter(invoice_date__range=[qtr_begin,qtr_end])
             return r
         return []
     
@@ -73,26 +76,42 @@ class Drug(models.Model):
     def q4(self):
         if self.ndcs:
             qtr_begin, qtr_end = (date(2019,10,1),date(2019,12,31))
-            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            drug_ps = Purchase.objects.filter(ndc_code__in=self.ndcs.all())
+            r = drug_ps.filter(invoice_date__range=[qtr_begin,qtr_end])
             return r
         return []
+
     
-    @property
-    def contract_qty(self):
+
+    def contract_qty(self,qtr):
         meas_qty = Contract.objects.get(drug_name=self.name).measured_equivalents_qty
         meas_unit = Contract.objects.get(drug_name=self.name).measured_equivalents_unit
-        qtr_begin, qtr_end = (date(2019,7,1),date(2019,9,30))
-        r = Purchase.objects.filter(invoice_date__range=['2019-07-01','2019-09-30'])
+
+        if qtr == 1:
+            qtr_begin, qtr_end = (date(2019,1,1),date(2019,3,31))
+        elif qtr == 2:
+            qtr_begin, qtr_end = (date(2019,4,1),date(2019,6,30))
+        elif qtr == 3:
+            qtr_begin, qtr_end = (date(2019,7,1),date(2019,9,30))
+        else:
+            qtr_begin, qtr_end = (date(2019,10,1),date(2019,12,31))
+
+        
+        drug_ps = Purchase.objects.filter(ndc_code__in=self.ndcs.all())
+        r = drug_ps.filter(invoice_date__range=[qtr_begin, qtr_end])
         delivered_qty = r.aggregate(Sum('delivered_qty'))
         extended_delivered_qty = r.aggregate(Sum('extended_delivered_qty'))
 
-        if int(meas_qty) == 1 and meas_unit == 'BOTTLE':
-            contract_qty = delivered_qty['delivered_qty__sum']
-            return contract_qty
+        if r:
+            if int(meas_qty) == 1 and meas_unit == 'BOTTLE':
+                contract_qty = delivered_qty['delivered_qty__sum']
+                return contract_qty
+            else:
+                contract_qty = extended_delivered_qty['extended_delivered_qty__sum'] / meas_qty
+                return contract_qty
         else:
-            contract_qty = extended_delivered_qty['extended_delivered_qty__sum'] / meas_qty
+            contract_qty = None
             return contract_qty
-        
         return contract_qty
 
 
@@ -122,6 +141,25 @@ class NDC(models.Model):
     package_qty= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
     mbus_per_ndc= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
     ndc_unit_sum = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+
+
+    @property
+    def latest_claim(self):
+        if self.purchases:
+            latest_claim = self.purchases.all().latest()
+            return latest_claim
+
+    @property
+    def latest_price(self):
+        if self.purchases:
+            latest_price = self.purchases.all().latest().unit_price
+            return latest_price
+    
+    @property
+    def latest_billing_unit_price(self):
+        if self.purchases:
+            latest_billing_unit_price = self.purchases.all().latest().billing_unit_price
+            return latest_billing_unit_price
 
     def __str__(self):
         return f"{self.drug_name} | {self.ndc_code} | {self.numerator_strength}"
@@ -171,6 +209,12 @@ class Contract(models.Model):
 
 
 class Purchase(models.Model):
+
+    class Meta:
+        verbose_name = 'Purchase'
+        verbose_name_plural = 'Purchases'
+        get_latest_by = ['invoice_date']
+
     os_account_id = models.CharField(max_length=6, blank=True, null=True)
     drug_name = models.CharField(max_length=100, blank=True, null=True)
     ndc_code = models.ForeignKey(NDC, on_delete=models.CASCADE, to_field='ndc_code', blank=True, null=True, related_name='purchases')

@@ -1,1 +1,131 @@
-drug_name,manufacturer,route_type,cpt_dosageAbraxane,Celgene,IV,1 mgAdcetris,Seattle,IV,1 mgAlimta,Eli Lilly and Company,IV,10 mgAloxi,Helsinn,IV,25 mcgAranesp,Amgen,IV,1 mcgAvastin,Genentech,IV,10 mgAzacitidine,Sandoz Inc.,IV,1 mgBavencio,EMD Serono,IV,10 mgBelrapzo,Eagle Pharmaceuticals,IV,1 mgBendeka,Teva,IV,1 mgBleomycin,West-Ward,IV,15 unitsBosulif,Pfizer,ORAL,Braftovi,Array BioPharma,ORAL,Cabometyx,Exelixis,ORAL,Calquence,Astra Zeneca,ORAL,Carboplatin,Sun Pharmaceuticals,IV,50 mgCerezyme,Genzyme,IV,10 unitsCinvanti,Heron Therapeutics,IV,1 mgCisplatin,WG Critical Care,IV,10 mgCopiktra,Verastem,ORAL,Cyanocobalamin,West-Ward,IV,1000 mcgCyclophosphamide,West-Ward,ORAL,25 mgCyramza,Eli Lilly and Company,IV,5 mgDacarbazine,Sicor,IV,100 mgDarzalex,Janssen,IV,10 mgDecitabine,Sagent,IV,1 mgDexamethasone,Morton,ORAL,0.25 mgDexferrum,"American Regent, Inc.",IV,Diphenhydramine,Fresenius,IV,50 mgDocetaxel,X-Gen,IV,1 mgEligard,Tolmar,IV,7.5 mgElitek,Sanofi,IV,0.5 mgEmpliciti,Bristol-Myers,IV,1 mgEntyvio,Takeda,IV,1 mgErbitux,Eli Lilly and Company,IV,10 mgErleada,Janssen,ORAL,Etoposide,West-Ward,IV,10 mgEvenity,Amgen,IV,1 mgFareston,Kyowa Kirin,ORAL,Faslodex,Astrazeneca,IV,25 mgFeraheme,AMAG Pharmaceuticals,IV,1 mgFerrlecit,Sanofi-Aventis,IV,12.5 mgFluorouracil,Sagent,IV,500 mgFulphila,Mylan,IV,0.5 mgFulvestrant,Sandoz Inc.,IV,25 mgFurosemide,Pfizer,IV,20 mgGammagard,Baxalta,IV,Gazyva,Genentech,IV,10 mgGemcitabine,Sagent,IV,200 mgGilotrif,Boehringer Ingelheim,ORAL,Granisetron,Sandoz Inc.,IV,100 mcgGranix,Teva,IV,1 mcgHalaven,Eisai Inc.,IV,0.1 mgHerceptin,Genentech,IV,10 mgIbrance,Pfizer,ORAL,Imbruvica,Pharmacyclics,ORAL,Imfinzi,Astrazeneca,IV,10 mgInfed,"Watson Pharmaceuticals, Inc.",IV,50 mgInjectafer,"American Regent, Inc.",IV,1 mgInlyta,Pfizer,ORAL,Jakafi,Incyte,ORAL,Jevtana,Sanofi,IV,1 mgKadcyla,Genentech,IV,1 mgKanjinti,Amgen,IV,10 mgKeytruda,Merck,IV,1 mgKisqali,Novartis,ORAL,Kyprolis,Amgen,IV,1 mgLenvima,Eisai Inc.,ORAL,Leucovorin,American Health Packaging,IV,50 mgLynparza,Astra Zeneca,ORAL,Magnesium Sulfate,WG Critical Care,IV,500 mgMektovi,Array BioPharma,ORAL,Mvasi,Amgen,IV,10 mgNerlynx,Puma Biotechnology,ORAL,Neulasta,Amgen,IV,6 mgNeupogen,Amgen,IV,1 mcgNexavar,Bayer,ORAL,Ninlaro,Takeda,ORAL,Nivestym,Pfizer,IV,1 mcgNplate,Amgen,IV,10 mcgNubeqa,Bayer,ORAL,Odomzo,Sun Pharmaceuticals,ORAL,Ondansetron,West-Ward,IV,1 mgOnivyde,Ipsen Pharma,IV,1 mgOpdivo,Bristol-Myers,IV,1 mgOxaliplatin,Sun Pharmaceuticals,IV,0.5 mgPaclitaxel,WG Critical Care,IV,1 mgPalonosetron,Northstar,IV,25 mcgPerjeta,Genentech,IV,1 mgPiqray,Novartis,ORAL,Potassium Chloride,Pfizer,IV,2 meqProcrit,Janssen,IV,100 unitsProlia,Amgen,IV,1 mgRanitidine,Mylan,IV,25 mgRetacrit,Vifor,IV,100 unitsRituxan,Genentech,IV,10 mgRituxan Hycela,Genentech,IV,10 mgRubraca,Clovis Oncology,ORAL,Sancuso,Kyowa Kirin,ORAL,Sandostatin,Novartis,IV,25 mcgSodium Chloride,Pfizer,IV,500 mlSolu-Medrol,Pfizer,IV,125 mgSomatuline Depot,Ipsen Pharma,IV,1 mgSprycel,Bristol-Myers,ORAL,Stivarga,Bayer,ORAL,Sustol,Heron Therapeutics,IV,0.1 mgSutent,Pfizer,ORAL,Tagrisso,Astra Zeneca,ORAL,Talzenna,Pfizer,ORAL,Tarceva,Genentech,ORAL,Tasigna,Novartis,ORAL,Tecentriq,Genentech,IV,10 mgTemozolomide,Teva,ORAL,5 mgTopotecan,Sicor,IV,0.1 mgTreanda,Teva,IV,1 mgUdenyca,Coherus BioSciences,IV,0.5 mgVarubi,TerSera,IV,Vectibix,Amgen,IV,10 mgVelcade,Takeda,IV,0.1 mgVenclexta,AbbVie,ORAL,Venofer,"American Regent, Inc.",IV,1 mgVerzenio,Eli Lilly and Company,ORAL,Vinorelbine,Sagent,IV,10 mgVizimpro,Pfizer,ORAL,Xgeva,Amgen,IV,1 mgXtandi,Astellas Pharma,ORAL,Zaltrap,Sanofi-Aventis,IV,1 mgZarxio,Sandoz Inc.,IV,1 mcgZejula,Tesaro,ORAL,Zytiga,Janssen,ORAL,
+drug_name,manufacturer,route_type,cpt_dosage
+Abraxane,Celgene,IV,1 mg
+Adcetris,Seattle,IV,1 mg
+Alimta,Eli Lilly and Company,IV,10 mg
+Aloxi,Helsinn,IV,25 mcg
+Aranesp,Amgen,IV,1 mcg
+Avastin,Genentech,IV,10 mg
+Azacitidine,Sandoz Inc.,IV,1 mg
+Bavencio,EMD Serono,IV,10 mg
+Belrapzo,Eagle Pharmaceuticals,IV,1 mg
+Bendeka,Teva,IV,1 mg
+Bleomycin,West-Ward,IV,15 units
+Bosulif,Pfizer,ORAL,
+Braftovi,Array BioPharma,ORAL,
+Cabometyx,Exelixis,ORAL,
+Calquence,Astrazeneca,ORAL,
+Carboplatin,Sun Pharmaceuticals,IV,50 mg
+Cerezyme,Genzyme,IV,10 units
+Cinvanti,Heron Therapeutics,IV,1 mg
+Cisplatin,WG Critical Care,IV,10 mg
+Copiktra,Verastem,ORAL,
+Cyanocobalamin,West-Ward,IV,1000 mcg
+Cyclophosphamide,West-Ward,ORAL,25 mg
+Cyramza,Eli Lilly and Company,IV,5 mg
+Dacarbazine,Sicor,IV,100 mg
+Darzalex,Janssen,IV,10 mg
+Decitabine,Sagent,IV,1 mg
+Dexamethasone,Morton,ORAL,0.25 mg
+Dexferrum,"American Regent, Inc.",IV,
+Diphenhydramine,Fresenius,IV,50 mg
+Docetaxel,X-Gen,IV,1 mg
+Eligard,Tolmar,IV,7.5 mg
+Elitek,Sanofi,IV,0.5 mg
+Empliciti,Bristol-Myers,IV,1 mg
+Entyvio,Takeda,IV,1 mg
+Erbitux,Eli Lilly and Company,IV,10 mg
+Erleada,Janssen,ORAL,
+Etoposide,West-Ward,IV,10 mg
+Evenity,Amgen,IV,1 mg
+Fareston,Kyowa Kirin,ORAL,
+Faslodex,Astrazeneca,IV,25 mg
+Feraheme,AMAG Pharmaceuticals,IV,1 mg
+Ferrlecit,Sanofi-Aventis,IV,12.5 mg
+Fluorouracil,Sagent,IV,500 mg
+Fulphila,Mylan,IV,0.5 mg
+Fulvestrant,Sandoz Inc.,IV,25 mg
+Furosemide,Pfizer,IV,20 mg
+Gammagard,Baxalta,IV,
+Gazyva,Genentech,IV,10 mg
+Gemcitabine,Sagent,IV,200 mg
+Gilotrif,Boehringer Ingelheim,ORAL,
+Granisetron,Sandoz Inc.,IV,100 mcg
+Granix,Teva,IV,1 mcg
+Halaven,Eisai Inc.,IV,0.1 mg
+Herceptin,Genentech,IV,10 mg
+Ibrance,Pfizer,ORAL,
+Imbruvica,Pharmacyclics,ORAL,
+Imfinzi,Astrazeneca,IV,10 mg
+Infed,"Watson Pharmaceuticals, Inc.",IV,50 mg
+Injectafer,"American Regent, Inc.",IV,1 mg
+Inlyta,Pfizer,ORAL,
+Jakafi,Incyte,ORAL,
+Jevtana,Sanofi,IV,1 mg
+Kadcyla,Genentech,IV,1 mg
+Kanjinti,Amgen,IV,10 mg
+Keytruda,Merck,IV,1 mg
+Kisqali,Novartis,ORAL,
+Kyprolis,Amgen,IV,1 mg
+Lenvima,Eisai Inc.,ORAL,
+Leucovorin,American Health Packaging,IV,50 mg
+Lynparza,Astrazeneca,ORAL,
+Magnesium Sulfate,WG Critical Care,IV,500 mg
+Mektovi,Array BioPharma,ORAL,
+Mvasi,Amgen,IV,10 mg
+Nerlynx,Puma Biotechnology,ORAL,
+Neulasta,Amgen,IV,6 mg
+Neupogen,Amgen,IV,1 mcg
+Nexavar,Bayer,ORAL,
+Ninlaro,Takeda,ORAL,
+Nivestym,Pfizer,IV,1 mcg
+Nplate,Amgen,IV,10 mcg
+Nubeqa,Bayer,ORAL,
+Odomzo,Sun Pharmaceuticals,ORAL,
+Ondansetron,West-Ward,IV,1 mg
+Onivyde,Ipsen Pharma,IV,1 mg
+Opdivo,Bristol-Myers,IV,1 mg
+Oxaliplatin,Sun Pharmaceuticals,IV,0.5 mg
+Paclitaxel,WG Critical Care,IV,1 mg
+Palonosetron,Northstar,IV,25 mcg
+Perjeta,Genentech,IV,1 mg
+Piqray,Novartis,ORAL,
+Potassium Chloride,Pfizer,IV,2 meq
+Procrit,Janssen,IV,100 units
+Prolia,Amgen,IV,1 mg
+Ranitidine,Mylan,IV,25 mg
+Retacrit,Vifor,IV,100 units
+Rituxan,Genentech,IV,10 mg
+Rituxan Hycela,Genentech,IV,10 mg
+Rubraca,Clovis Oncology,ORAL,
+Sancuso,Kyowa Kirin,ORAL,
+Sandostatin,Novartis,IV,25 mcg
+Sodium Chloride,Pfizer,IV,500 ml
+Solu-Medrol,Pfizer,IV,125 mg
+Somatuline Depot,Ipsen Pharma,IV,1 mg
+Sprycel,Bristol-Myers,ORAL,
+Stivarga,Bayer,ORAL,
+Sustol,Heron Therapeutics,IV,0.1 mg
+Sutent,Pfizer,ORAL,
+Tagrisso,Astrazeneca,ORAL,
+Talzenna,Pfizer,ORAL,
+Tarceva,Genentech,ORAL,
+Tasigna,Novartis,ORAL,
+Tecentriq,Genentech,IV,10 mg
+Temozolomide,Teva,ORAL,5 mg
+Topotecan,Sicor,IV,0.1 mg
+Treanda,Teva,IV,1 mg
+Udenyca,Coherus BioSciences,IV,0.5 mg
+Varubi,TerSera,IV,
+Vectibix,Amgen,IV,10 mg
+Velcade,Takeda,IV,0.1 mg
+Venclexta,AbbVie,ORAL,
+Venofer,"American Regent, Inc.",IV,1 mg
+Verzenio,Eli Lilly and Company,ORAL,
+Vinorelbine,Sagent,IV,10 mg
+Vizimpro,Pfizer,ORAL,
+Xgeva,Amgen,IV,1 mg
+Xtandi,Astellas Pharma,ORAL,
+Zaltrap,Sanofi-Aventis,IV,1 mg
+Zarxio,Sandoz Inc.,IV,1 mcg
+Zejula,Tesaro,ORAL,
+Zytiga,Janssen,ORAL,

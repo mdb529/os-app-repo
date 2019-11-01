@@ -1,5 +1,6 @@
 {% extends "purchasing/base.html" %}
 
+
 {% block head %}
 <title>{% block title %}Drugs{% endblock %}</title>
 {% endblock %}
@@ -9,20 +10,18 @@
 <h1>Drugs</h1>
     <div class="row">
     {% for drug in drugs %}
+    {% if drug.contract %}
         <div class="col s4">
             <div class="card small blue-grey darken-1">
-                <div class="card-content white-text" style="font-size: 20px;">
-                    <span class="card-title">{{ drug.name }}</span>
+                <div class="card-content white-text" style="font-size: 24px;">
+                    <span class="card-title" style="text-decoration: underline;font-weight: bold;">{{ drug.name }}</span>
                     <p>{{ drug.manufacturer }}</p>
                     <p>{{ drug.route_type }}</p>
-                    <p>Q1: {{ drug.q1 }}</p>
-                    <p>Q2: {{ drug.q2 }}</p>
-                    <p>Q3: {{ drug.q3 }}</p>
-                    <p>Q4: {{ drug.q4 }}</p>
-
                 </div>
             </div>
+            <a href="{% url 'single_drug' slug=drug.slug %}" class="blue-grey darken-4 btn-small" style="margin: 5px;">View Drug</a>
         </div>
+    {% endif %}
     {% endfor %}
     </div>
 <br>

@@ -16,3 +16,12 @@ def run():
         )
         m.save()
         print(f'{m.name} was added to database...')
+    
+    print('--- Adding Logo Images ---')
+    for m in Manufacturer.objects.all():
+        try:
+            m.logo_img = 'logos/' + m.slug + '.png'
+            print(f'adding {m} logo_img {m.logo_img}...')
+            m.save()
+        except Exception:
+            pass

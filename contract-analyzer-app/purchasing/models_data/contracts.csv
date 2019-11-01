@@ -1,70 +1,70 @@
 ﻿proprietary_name,pharmaceutical_manufacturer,contract_type,measured_equivalents_qty,measured_equivalents_unit,effective_start_date,effective_end_date
-Abraxane,Celgene,IV,1,BOTTLE,7/1/2019,9/30/2019
-Alimta,Eli Lilly and Company,IV,100,mg,7/1/2019,9/30/2019
-Avastin,Genentech,IV,100,mg,7/1/2019,9/30/2019
-Belrapzo,Eagle Pharmaceuticals,IV,100,mg,7/1/2019,9/30/2019
-Bendeka,Teva,IV,1,mg,7/1/2019,9/30/2019
-Bosulif,Pfizer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Braftovi,Array BioPharma,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Cabometyx,Exelixis,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Calquence,Astrazeneca,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Cinvanti,Heron Therapeutics,IV,130,mg,7/1/2019,9/30/2019
-Copiktra,Verastem,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Cyramza,Eli Lilly and Company,IV,100,mg,7/1/2019,9/30/2019
-Darzalex,Janssen,IV,100,mg,7/1/2019,9/30/2019
-Elitek,Sanofi-Aventis,IV,1.5,mg,7/1/2019,9/30/2019
-Erbitux,Eli Lilly and Company,IV,100,mg,7/1/2019,9/30/2019
-Erleada,Janssen,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Fareston,Kyowa Kirin,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Feraheme,AMAG Pharmaceuticals,IV,1000,mg,7/1/2019,9/30/2019
-Fulphila,Mylan,IV,6,mg,7/1/2019,9/30/2019
-Gazyva,Genentech,IV,1000,mg,7/1/2019,9/30/2019
-Gilotrif,Boehringer Ingelheim,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Halaven,Eisai Inc.,IV,1,BOTTLE,7/1/2019,9/30/2019
-Herceptin,Genentech,IV,150,mg,7/1/2019,9/30/2019
-Ibrance,Pfizer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Imbruvica,Pharmacyclics,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Injectafer,"American Regent, Inc.",IV,1,g,7/1/2019,9/30/2019
-Inlyta,Pfizer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Jevtana,Sanofi-Aventis,IV,60,mg,7/1/2019,9/30/2019
-Kanjinti,Amgen,IV,420,mg,7/1/2019,9/30/2019
-Kisqali,Novartis,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Kyprolis,Amgen,IV,60,mg,7/1/2019,9/30/2019
-Lenvima,Eisai Inc.,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Lynparza,Astrazeneca,ORAL,1,WAC AMOUNT,7/1/2019,9/30/2019
-Mektovi,Array BioPharma,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Mvasi,Amgen,IV,100,mg,7/1/2019,9/30/2019
-Nerlynx,Puma Biotechnology,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Neulasta,Amgen,IV,6,mg,7/1/2019,9/30/2019
-Neupogen,Amgen,IV,1,BOTTLE,7/1/2019,9/30/2019
-Nexavar,Bayer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Ninlaro,Takeda,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Nplate,Amgen,IV,1,BOTTLE,7/1/2019,9/30/2019
-Nubeqa,Bayer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Odomzo,Sun Pharmaceuticals,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Procrit,Janssen,IV,1,BOTTLE,7/1/2019,9/30/2019
-Rituxan,Genentech,IV,100,mg,7/1/2019,9/30/2019
-Rituxan Hycela,Genentech,IV,200,mg,7/1/2019,9/30/2019
-Rubraca,Clovis Oncology,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Sancuso,Kyowa Kirin,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Somatuline Depot,Ipsen Pharma,IV,120,mg,7/1/2019,9/30/2019
-Stivarga,Bayer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Sustol,Heron Therapeutics,IV,1,BOTTLE,7/1/2019,9/30/2019
-Sutent,Pfizer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Tagrisso,Astrazeneca,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Talzenna,Pfizer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Tarceva,Genentech,ORAL,25,mg,7/1/2019,9/30/2019
-Tecentriq,Genentech,IV,120,mg,7/1/2019,9/30/2019
-Treanda,Teva,IV,1,mg,7/1/2019,9/30/2019
-Udenyca,Coherus BioSciences,IV,1,BOTTLE,7/1/2019,9/30/2019
-Varubi,TerSera,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Vectibix,Amgen,IV,400,mg,7/1/2019,9/30/2019
-Velcade,Takeda,IV,3.5,mg,7/1/2019,9/30/2019
-Venclexta,AbbVie,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Verzenio,Eli Lilly and Company,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Vizimpro,Pfizer,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Xgeva,Amgen,IV,1,BOTTLE,7/1/2019,9/30/2019
-Xtandi,Astellas Pharma,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Zarxio,Sandoz Inc.,IV,480,mcg,7/1/2019,9/30/2019
-Zejula,Tesaro,ORAL,1,BOTTLE,7/1/2019,9/30/2019
-Zytiga,Janssen,ORAL,1,BOTTLE,7/1/2019,9/30/2019
+Abraxane,Celgene,IV,1,BOTTLE,2019-07-01,2019-09-30
+Alimta,Eli Lilly and Company,IV,100,mg,2019-07-01,2019-09-30
+Avastin,Genentech,IV,100,mg,2019-07-01,2019-09-30
+Belrapzo,Eagle Pharmaceuticals,IV,100,mg,2019-07-01,2019-09-30
+Bendeka,Teva,IV,1,mg,2019-07-01,2019-09-30
+Bosulif,Pfizer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Braftovi,Array BioPharma,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Cabometyx,Exelixis,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Calquence,Astrazeneca,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Cinvanti,Heron Therapeutics,IV,130,mg,2019-07-01,2019-09-30
+Copiktra,Verastem,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Cyramza,Eli Lilly and Company,IV,100,mg,2019-07-01,2019-09-30
+Darzalex,Janssen,IV,100,mg,2019-07-01,2019-09-30
+Elitek,Sanofi-Aventis,IV,1.5,mg,2019-07-01,2019-09-30
+Erbitux,Eli Lilly and Company,IV,100,mg,2019-07-01,2019-09-30
+Erleada,Janssen,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Fareston,Kyowa Kirin,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Feraheme,AMAG Pharmaceuticals,IV,1000,mg,2019-07-01,2019-09-30
+Fulphila,Mylan,IV,6,mg,2019-07-01,2019-09-30
+Gazyva,Genentech,IV,1000,mg,2019-07-01,2019-09-30
+Gilotrif,Boehringer Ingelheim,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Halaven,Eisai Inc.,IV,1,BOTTLE,2019-07-01,2019-09-30
+Herceptin,Genentech,IV,150,mg,2019-07-01,2019-09-30
+Ibrance,Pfizer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Imbruvica,Pharmacyclics,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Injectafer,"American Regent, Inc.",IV,1,g,2019-07-01,2019-09-30
+Inlyta,Pfizer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Jevtana,Sanofi-Aventis,IV,60,mg,2019-07-01,2019-09-30
+Kanjinti,Amgen,IV,420,mg,2019-07-01,2019-09-30
+Kisqali,Novartis,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Kyprolis,Amgen,IV,60,mg,2019-07-01,2019-09-30
+Lenvima,Eisai Inc.,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Lynparza,Astrazeneca,ORAL,1,WAC AMOUNT,2019-07-01,2019-09-30
+Mektovi,Array BioPharma,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Mvasi,Amgen,IV,100,mg,2019-07-01,2019-09-30
+Nerlynx,Puma Biotechnology,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Neulasta,Amgen,IV,6,mg,2019-07-01,2019-09-30
+Neupogen,Amgen,IV,1,BOTTLE,2019-07-01,2019-09-30
+Nexavar,Bayer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Ninlaro,Takeda,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Nplate,Amgen,IV,1,BOTTLE,2019-07-01,2019-09-30
+Nubeqa,Bayer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Odomzo,Sun Pharmaceuticals,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Procrit,Janssen,IV,1,BOTTLE,2019-07-01,2019-09-30
+Rituxan,Genentech,IV,100,mg,2019-07-01,2019-09-30
+Rituxan Hycela,Genentech,IV,200,mg,2019-07-01,2019-09-30
+Rubraca,Clovis Oncology,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Sancuso,Kyowa Kirin,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Somatuline Depot,Ipsen Pharma,IV,120,mg,2019-07-01,2019-09-30
+Stivarga,Bayer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Sustol,Heron Therapeutics,IV,1,BOTTLE,2019-07-01,2019-09-30
+Sutent,Pfizer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Tagrisso,Astrazeneca,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Talzenna,Pfizer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Tarceva,Genentech,ORAL,25,mg,2019-07-01,2019-09-30
+Tecentriq,Genentech,IV,120,mg,2019-07-01,2019-09-30
+Treanda,Teva,IV,1,mg,2019-07-01,2019-09-30
+Udenyca,Coherus BioSciences,IV,1,BOTTLE,2019-07-01,2019-09-30
+Varubi,TerSera,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Vectibix,Amgen,IV,400,mg,2019-07-01,2019-09-30
+Velcade,Takeda,IV,3.5,mg,2019-07-01,2019-09-30
+Venclexta,AbbVie,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Verzenio,Eli Lilly and Company,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Vizimpro,Pfizer,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Xgeva,Amgen,IV,1,BOTTLE,2019-07-01,2019-09-30
+Xtandi,Astellas Pharma,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Zarxio,Sandoz Inc.,IV,480,mcg,2019-07-01,2019-09-30
+Zejula,Tesaro,ORAL,1,BOTTLE,2019-07-01,2019-09-30
+Zytiga,Janssen,ORAL,1,BOTTLE,2019-07-01,2019-09-30

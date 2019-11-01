@@ -100,15 +100,24 @@ def run():
     print(f'========================== PROCESSES_PURCHASES.PY ==========================')
     print(f'Setting PdOptions...')
     setPdOptions()
+
+    print(f'Reading Recent Data...')
+    recent_df = pd.read_excel('purchasing/purchase_data/preprocessed/recent_file.xlsx', index_col=0)
+    
     print(f'Reading Data...')
-    input_df = pd.read_excel('purchasing/purchase_data/preprocessed/preprocessed_os_purchases.xlsx', index_col=0)
+    input_df = pd.read_excel('purchasing/purchase_data/preprocessed/preprocessed_combined_os_purchases.xlsx', index_col=0)
+    
     print(f'Processing Data...')
     pre_processed_df = preProcessData(input_df=input_df)
     print(f'Merging Data...')
     merged_df = mergeData(pre_processed_df=pre_processed_df)
     print(f'Creating Output DataFrame...')
     output_df = outputData(merged_df=merged_df)
+
+    # print(f'Writing Recent Output Data...')
+    # output_df.to_excel('purchasing/purchase_data/processed/processed_recent_file.xlsx')
+
     print(f'Writing Output Data...')
-    output_df.to_excel('purchasing/purchase_data/processed/processed_recent_purchases.xlsx')
+    output_df.to_excel('purchasing/purchase_data/processed/processed_combined_recent_purchases.xlsx')
     print(f'Output Data Sample:')
     print(output_df.head())
