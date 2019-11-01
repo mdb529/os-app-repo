@@ -2,10 +2,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from os_contracts import views
+from purchasing import views
 
 urlpatterns = [
-    path('', include('os_contracts.urls')),
+    path('', include('purchasing.urls')),
     path('admin/', admin.site.urls),
 ]
 

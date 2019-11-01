@@ -1,9 +1,13 @@
 from django.db import models
+from django.db.models import Sum, Avg, Min, Max, Count
 from django.contrib.postgres.fields import JSONField
 import json 
 from pprint import pprint
 from django.core.files.storage import FileSystemStorage
 from django.utils.text import slugify
+from .managers import DrugManager,PurchaseManager
+from datetime import date, datetime
+
 
 
 class Manufacturer(models.Model):
@@ -18,13 +22,79 @@ class Manufacturer(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+
 class Drug(models.Model):
-    
-    name = models.CharField(max_length=100, primary_key=True)
+    name = models.CharField(max_length=100,primary_key=True)
     slug = models.SlugField()
-    manufacturer= models.ForeignKey(Manufacturer, on_delete=models.CASCADE, to_field='name',related_name='drugs')
+    manufacturer= models.ForeignKey(Manufacturer, on_delete=models.CASCADE, to_field='name',related_name='drugs',blank=True, null=True)
     route_type= models.CharField(max_length=10,blank=True, null=True)
     cpt_dosage= models.CharField(max_length=100,blank=True, null=True)
+
+    @property
+    def meas_qty(self):
+        return Contract.objects.get(drug_name=self.name).measured_equivalents_qty
+    
+    @property
+    def meas_unit(self):
+        return Contract.objects.get(drug_name=self.name).measured_equivalents_unit
+
+    @property
+    def all_purchases(self):
+        if self.ndcs:
+            r = Purchase.objects.filter(ndc_code__in=self.ndcs.all())
+            return r
+        return []
+
+    @property
+    def q1(self):
+        if self.ndcs:
+            qtr_begin, qtr_end = (date(2019,1,1),date(2019,3,31))
+            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            return r
+        return []
+
+    @property
+    def q2(self):
+        if self.ndcs:
+            qtr_begin, qtr_end = (date(2019,4,1),date(2019,6,30))
+            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            return r
+        return []
+
+    @property
+    def q3(self):
+        if self.ndcs:
+            qtr_begin, qtr_end = (date(2019,7,1),date(2019,9,30))
+            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            return r
+        return []
+    
+    @property
+    def q4(self):
+        if self.ndcs:
+            qtr_begin, qtr_end = (date(2019,10,1),date(2019,12,31))
+            r = Purchase.objects.filter(invoice_date__range=[qtr_begin,qtr_end])
+            return r
+        return []
+    
+    @property
+    def contract_qty(self):
+        meas_qty = Contract.objects.get(drug_name=self.name).measured_equivalents_qty
+        meas_unit = Contract.objects.get(drug_name=self.name).measured_equivalents_unit
+        qtr_begin, qtr_end = (date(2019,7,1),date(2019,9,30))
+        r = Purchase.objects.filter(invoice_date__range=['2019-07-01','2019-09-30'])
+        delivered_qty = r.aggregate(Sum('delivered_qty'))
+        extended_delivered_qty = r.aggregate(Sum('extended_delivered_qty'))
+
+        if int(meas_qty) == 1 and meas_unit == 'BOTTLE':
+            contract_qty = delivered_qty['delivered_qty__sum']
+            return contract_qty
+        else:
+            contract_qty = extended_delivered_qty['extended_delivered_qty__sum'] / meas_qty
+            return contract_qty
+        
+        return contract_qty
+
 
 
     def save(self, *args, **kwargs):
@@ -34,13 +104,17 @@ class Drug(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+
+
+
+
 class NDC(models.Model):
     class Meta:
         verbose_name = 'NDC'
         verbose_name_plural = 'NDCs'
 
     drug_name= models.ForeignKey(Drug, on_delete=models.CASCADE, to_field='name', related_name='ndcs')
-    ndc_code= models.CharField(max_length=13, primary_key=True)
+    ndc_code= models.CharField(max_length=13,primary_key=True)
     hcpcs_code= models.CharField(max_length=5,blank=True, null=True)
     numerator_strength= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
     cpt_mbu= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
@@ -52,6 +126,9 @@ class NDC(models.Model):
     def __str__(self):
         return f"{self.drug_name} | {self.ndc_code} | {self.numerator_strength}"
     
+
+
+
 class Contract(models.Model):
 
     CONTRACT_TYPES = (
@@ -82,19 +159,21 @@ class Contract(models.Model):
 
     def get_contract_qty(self):
         if self.measured_equivalents_qty == 1 & self.measured_equivalents_unit == 'BOTTLE':
-            self.contract_qty = SUM(self.delivered_qty)
+            self.contract_qty = Sum(self.delivered_qty)
             return self.contract_qty
         else:
-            self.contract_qty = SUM(self.extended_delivered_qty) / self.measured_equivalents_qty
+            self.contract_qty = Sum(self.extended_delivered_qty) / self.measured_equivalents_qty
             return self.contract_qty
 
     def __str__(self):
         return f"Contract: {self.drug_name} Manufacturer: {self.manufacturer} Drug Category: {self.drug_category} Measured Equivalents: {self.measured_equivalents_qty}"
 
-class Transaction(models.Model):
+
+
+class Purchase(models.Model):
     os_account_id = models.CharField(max_length=6, blank=True, null=True)
     drug_name = models.CharField(max_length=100, blank=True, null=True)
-    ndc_code = models.ForeignKey(NDC, on_delete=models.CASCADE, to_field='ndc_code', blank=True, null=True, related_name='transactions')
+    ndc_code = models.ForeignKey(NDC, on_delete=models.CASCADE, to_field='ndc_code', blank=True, null=True, related_name='purchases')
     hcpcs_code = models.CharField(max_length=100, blank=True, null=True)
     order_date = models.DateField(blank=True, null=True)
     invoice_date = models.DateField(blank=True, null=True)
@@ -118,5 +197,7 @@ class Transaction(models.Model):
     extended_delivered_qty = models.DecimalField(max_digits=15, decimal_places=4, blank=True, null=True)
 
 
+
     def __str__(self):
         return f"{self.invoice_date} | {self.drug_name} | {self.delivered_qty} | {self.extended_delivered_qty}"
+    

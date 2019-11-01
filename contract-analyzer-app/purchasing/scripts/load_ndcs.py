@@ -1,12 +1,12 @@
 import csv
 import pandas as pd
-from os_contracts.models import Drug,Manufacturer,NDC
+from purchasing.models import Drug,Manufacturer,NDC,Contract,Purchase
 
 def run():
-
-    
+    print(f'========================== LOAD_NDCS.PY ==========================')
+    print(f'=========== START ===========')
     NDC.objects.all().delete()
-    df = pd.read_csv('os_contracts/temp/ndcs.csv')
+    df = pd.read_csv('purchasing/models_data/ndcs.csv')
     df = df.fillna(0)
     df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('(', '').str.replace(')','').str.replace('#', 'number')
 
@@ -25,3 +25,4 @@ def run():
         )
         n.save()
         print(f'{n.ndc_code} was added to database...')
+    print('=================== DONE ===================')
