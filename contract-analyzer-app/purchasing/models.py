@@ -28,7 +28,8 @@ class Drug(models.Model):
     slug = models.SlugField()
     manufacturer= models.ForeignKey(Manufacturer, on_delete=models.CASCADE, to_field='name',related_name='drugs',blank=True, null=True)
     route_type= models.CharField(max_length=10,blank=True, null=True)
-    cpt_dosage= models.CharField(max_length=100,blank=True, null=True)
+    cpt_dosage = models.CharField(max_length=100, blank=True, null=True)
+    
 
     @property
     def meas_qty(self):
@@ -80,7 +81,6 @@ class Drug(models.Model):
             r = drug_ps.filter(invoice_date__range=[qtr_begin,qtr_end])
             return r
         return []
-
     
 
     def contract_qty(self,qtr):
@@ -112,6 +112,7 @@ class Drug(models.Model):
         else:
             contract_qty = None
             return contract_qty
+            
         return contract_qty
 
 
@@ -122,8 +123,6 @@ class Drug(models.Model):
 
     def __str__(self):
         return f"{self.name}"
-
-
 
 
 
@@ -142,6 +141,10 @@ class NDC(models.Model):
     mbus_per_ndc= models.DecimalField(max_digits=10,decimal_places=2,blank=True, null=True)
     ndc_unit_sum = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
 
+    # @property
+    # def strength(self):
+    #     strength_int = int(self.numerator_strength)
+    #     unit = Drug.objects.filter(ndc_code=self.ndc_code).
 
     @property
     def latest_claim(self):
@@ -180,7 +183,6 @@ class Contract(models.Model):
         ('VMS', 'Volume/Market Share'),
         ('VMS', 'Volume/Market Share'),
     )
-    
 
     drug_name= models.OneToOneField(Drug, on_delete=models.CASCADE, to_field='name')
     manufacturer= models.ForeignKey(Manufacturer, on_delete=models.CASCADE, to_field='name',related_name='contracts')
@@ -189,19 +191,17 @@ class Contract(models.Model):
     measured_equivalents_unit= models.CharField(max_length=10, blank=True, null=True)
     contract_type= models.CharField(choices=CONTRACT_TYPES, max_length=50,blank=True, null=True)
     effective_start_date= models.DateField(blank=True, null=True)
-    effective_end_date= models.DateField(blank=True, null=True)
+    effective_end_date = models.DateField(blank=True, null=True)
+    measurement_period_start_date= models.DateField(blank=True, null=True)
+    measurement_period_end_date= models.DateField(blank=True, null=True)
     baseline_start_date= models.DateField(blank=True, null=True)
     baseline_end_date= models.DateField(blank=True, null=True)
     baseline_measure= models.CharField(max_length=50, blank=True, null=True)
-    rebate_schedule= JSONField(blank=True, null=True)
+    rebate_schedule = JSONField(blank=True, null=True)
+    discount_schedule = JSONField(blank=True, null=True)
+    
+        
 
-    def get_contract_qty(self):
-        if self.measured_equivalents_qty == 1 & self.measured_equivalents_unit == 'BOTTLE':
-            self.contract_qty = Sum(self.delivered_qty)
-            return self.contract_qty
-        else:
-            self.contract_qty = Sum(self.extended_delivered_qty) / self.measured_equivalents_qty
-            return self.contract_qty
 
     def __str__(self):
         return f"Contract: {self.drug_name} Manufacturer: {self.manufacturer} Drug Category: {self.drug_category} Measured Equivalents: {self.measured_equivalents_qty}"
@@ -244,4 +244,3 @@ class Purchase(models.Model):
 
     def __str__(self):
         return f"{self.invoice_date} | {self.drug_name} | {self.delivered_qty} | {self.extended_delivered_qty}"
-    

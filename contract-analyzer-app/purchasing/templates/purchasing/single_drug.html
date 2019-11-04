@@ -1,4 +1,5 @@
 {% extends "purchasing/base.html" %}
+{% load custom_tags %}
 {% load custom_filters %}
 
 {% block head %}
@@ -13,9 +14,10 @@
 <div class="container" style="text-align:center;">
 <h1 style="text-decoration: underline;font-weight: bold;">{{ single_drug.name }}</h1>
 <h1>({{ single_drug.route_type }})</h1>
-    <table class="responsive-table" style="font-size: 40px;">
+    <table class="responsive-table" style="font-size: 30px;">
         <thead>
             <tr>
+                <td>Quarter:</td>
                 <th>Q1</th>
                 <th>Q2</th>
                 <th>Q3</th>
@@ -24,51 +26,66 @@
         </thead>
         <tbody>
             <tr>
+                <td>Quantity:</td>
                 <td>{{ q1_contract_qty|floatformat:2 }}</td>
                 <td>{{ q2_contract_qty|floatformat:2 }}</td>
                 <td>{{ q3_contract_qty|floatformat:2 }}</td>
                 <td>{{ q4_contract_qty|floatformat:2 }}</td>
             </tr>
+            <tr>
+                <td>Total $:</td>
+                <td>{{ q1_purchases|currency }}</td>
+                <td>{{ q2_purchases|currency }}</td>
+                <td>{{ q3_purchases|currency }}</td>
+                <td>{{ q4_purchases|currency }}</td>
+            </tr>
+            <tr>
+                <td>Rebate %:</td>
+                <td>{% get_rebate_pct volume_tiers q1_contract_qty %}</td>
+                <td>{% get_rebate_pct volume_tiers q2_contract_qty %}</td>
+                <td>{% get_rebate_pct volume_tiers q3_contract_qty %}</td>
+                <td>{% get_rebate_pct volume_tiers q4_contract_qty %}</td>
+            </tr>
+            <tr>
+                <td>Rebate Amount:</td>
+                <td>${% get_rebate_amt volume_tiers q1_contract_qty q1_purchases %}</td>
+                <td>${% get_rebate_amt volume_tiers q2_contract_qty q2_purchases %}</td>
+                <td>${% get_rebate_amt volume_tiers q3_contract_qty q3_purchases %}</td>
+                <td>${% get_rebate_amt volume_tiers q4_contract_qty q4_purchases %}</td>
+            </tr>
         </tbody>
     </table>
 
-
-
     <div class="row">
-    {% for ndc in ndc_list %}
-    <div class="col s4">
-        {% if single_drug.route_type == 'IV' %}
-        <div class="card med blue-grey darken-1">
-            <div class="card-content white-text" style="font-size: 20px;">
-                <span class="card-title" style="font-weight: bold;font-size: 24px;">NDC: {{ ndc.ndc_code }}</span>
-                <p>Strength: {{ ndc.numerator_strength }}</p>
-                <p>HCPCS Code: {{ ndc.hcpcs_code }}</p>
-                <p>MBU: {{ ndc.cpt_mbu }}</p>
-                <p>Package Qty: {{ ndc.package_qty }}</p>
-                <h3 style="text-decoration: underline;font-weight: bold;font-size: 20px;">Latest Prices:</h3>
-                <p>(As of {{ ndc.latest_claim.invoice_date }})</p>
-                <p>NDC Price: {{ ndc.latest_price|currency }}</p>
-                <p>BU Price: {{ ndc.latest_billing_unit_price|currency }}</p>
+        {% for ndc in ndc_list %}
+        <div class="col s4">
+            {% if single_drug.route_type == 'IV' %}
+            <div class="card med blue-grey darken-1">
+                <div class="card-content white-text" style="font-size: 20px;">
+            {% else %}
+            <div class="card med red darken-1">
+                <div class="card-content black-text" style="font-size: 20px;">
+            {% endif %}
+                    <span class="card-title" style="font-weight: bold;font-size: 24px;">NDC: {{ ndc.ndc_code }}</span>
+                    <p>Strength: {{ ndc.numerator_strength }}</p>
+                    <p>HCPCS Code: {{ ndc.hcpcs_code }}</p>
+                    <p>MBU: {{ ndc.cpt_mbu }}</p>
+                    <p>Package Qty: {{ ndc.package_qty }}</p>
+                    <h3 style="text-decoration: underline;font-weight: bold;font-size: 20px;">Latest Prices:</h3>
+                    <p>(As of {{ ndc.latest_claim.invoice_date }})</p>
+                    <p>NDC Price: {{ ndc.latest_price|currency }}</p>
+                    <p>BU Price: {{ ndc.latest_billing_unit_price|currency }}</p>
+                </div>
             </div>
-        </div>
-        {% else %}
-        <div class="card med red darken-1">
-            <div class="card-content black-text" style="font-size: 20px;">
-                <span class="card-title" style="font-weight: bold;font-size: 24px;">NDC: {{ ndc.ndc_code }}</span>
-                <p>Strength: {{ ndc.numerator_strength }}</p>
-                <p>HCPCS Code: {{ ndc.hcpcs_code }}</p>
-                <p>MBU: {{ ndc.cpt_mbu }}</p>
-                <p>Package Qty: {{ ndc.package_qty }}</p>
-                <h3 style="text-decoration: underline;font-weight: bold;font-size: 20px;">Latest Prices:</h3>
-                <p>(As of {{ ndc.latest_claim.invoice_date }})</p>
-                <p>NDC Price: {{ ndc.latest_price|currency }}</p>
-                <p>BU Price: {{ ndc.latest_billing_unit_price|currency }}</p>
+                </div>
             </div>
+        {% endfor %}
         </div>
-        {% endif %}
     </div>
-    {% endfor %}
-    </div>
+</div>
+
+
+
 <a href="{% url 'manufacturers' %}" class="black btn-small" style="position: fixed; bottom:50px; left: 0px; margin: 5px;">Back to Manufacturers Page</a>
 <a href="{% url 'drugs' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to Drugs Page</a>
 {% endblock %}

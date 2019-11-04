@@ -1,0 +1,37 @@
+{% extends "purchasing/base.html" %}
+{% load custom_tags %}
+{% load custom_filters %}
+
+{% block head %}
+<title>
+    {% block title %}
+    TEST
+    {% endblock %}
+</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>TESTING</h1>
+    <div class="side-nav-button">
+        <a id="sidebar-nav" class="tooltipped" href="#sidr" data-position="right" data-tooltip="Open side navbar">
+            <i class="fa fa-bars" style="margin-top: 9px;"></i>
+        </a>
+    </div>
+
+    <div class="side-navbar">
+        <ul style="margin-top:50px;">
+            <li><a href="/" class="active"><i class="fa fa-home fa-2x"></i> Home</a></li>
+            <li><a href="/blog" class="side--blog"><i class="fa fa-terminal fa-2x"></i> Blog</a></li>
+            <li><a href="/archive" class="side--archive"><i class="fa fa-archive fa-2x"></i> Archive</a></li>
+            <li><a href="/portfolio" class="side--projects"><i class="fa fa-code fa-2x"></i> Projects</a></li>
+            <li><a href="/about" class="side--about"><i class="fa fa-child fa-2x"></i> About</a></li>
+            <li><a href="/contact" class="side--contact"><i class="fa fa-send fa-2x"></i> Contact</a></li>
+        </ul>
+    </div>
+</div>
+<a href="{% url 'manufacturers' %}" class="black btn-small"
+    style="position: fixed; bottom:50px; left: 0px; margin: 5px;">Back to Manufacturers Page</a>
+<a href="{% url 'drugs' %}" class="black btn-small" style="position: fixed; bottom:5px; left: 0px; margin: 5px;">Back to
+    Drugs Page</a>
+{% endblock %}
