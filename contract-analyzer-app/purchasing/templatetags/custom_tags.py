@@ -1,4 +1,5 @@
 from django import template
+from decimal import Decimal
 register = template.Library()
 
 from ..models import Drug,Purchase,NDC,Contract,Manufacturer
@@ -12,10 +13,10 @@ def percentage(value):
     return format(value, ".2%")
 
 @register.simple_tag
-def get_rebate_pct(volume_tiers,volume):
+def get_volume_rebate_pct(volume_tiers,volume):
     for tier in volume_tiers:
         if volume >= tier['min'] and volume <= tier['max']:
-            rebate = tier['rebate']
+            rebate = "{0:.2%}".format(tier['rebate'])
         else:
             pass
     return rebate
@@ -27,5 +28,5 @@ def get_rebate_amt(volume_tiers,volume,sales):
             rebate_pct = tier['rebate']
         else:
             pass
-    rebate_amt = float(rebate_pct) * float(sales)
+    rebate_amt = "${:,.2f}".format(Decimal(rebate_pct) * Decimal(sales))
     return rebate_amt

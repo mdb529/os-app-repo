@@ -2,7 +2,7 @@ from django.db.models import Avg, Sum, Min, Max, Count
 from django.http import HttpResponse, Http404
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
-from .models import Drug, Manufacturer, NDC, Contract, Purchase
+from .models import Drug, Manufacturer, Contract, NDC, Purchase
 import pandas as pd
 import math
 from datetime import date, datetime, timedelta
@@ -97,21 +97,3 @@ def purchases(request):
         'drug_list': drug_list
     }
     return render(request, 'purchasing/purchases.html', context)
-
-def test_style(request):
-    drug = Drug.objects.get(name='Abraxane')
-    ndc = NDC.objects.get(drug_name='Abraxane')
-
-    contract = drug.contract
-    contract_rebate_schedule = contract.rebate_schedule
-    growth_tiers = contract_rebate_schedule['growth_tiers']
-    volume_tiers = contract_rebate_schedule['volume_tiers']
-    context = {
-        "drug": drug,
-        "ndc": ndc,
-        "contract": contract,
-        "contract_rebate_schedule": contract_rebate_schedule,
-        "growth_tiers": growth_tiers,
-        "volume_tiers":volume_tiers
-    }
-    return render(request, 'purchasing/test_style.html',context)

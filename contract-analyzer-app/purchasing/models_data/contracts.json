@@ -520,4 +520,43 @@
         "rebate": 0.20 
       }
   ]
+},
+{
+  "__type__":"Contract",
+  "contract_name":"Q3_Avastin",
+  "drug_name": "Avastin",
+  "contract_category":"IV",
+  "contract_type": "V",
+  "is_portfolio": false,
+  "is_rebate": true,
+  "is_discount": false,
+  "rebate_percentage_of": "net_sales",
+  "discount_percentage_of": null,
+  "baseline_start": "2018-07-01",
+  "baseline_end": "2018-09-30",
+  "baseline_measure": "SUM",
+  "measured_equivalents_qty": 100,
+  "measured_equivalents_units": "MG",
+  "volume_tiers": [
+    {
+      "tier": 1,
+      "min": 0,
+      "max": 15,
+      "rebate": 0.00 
+    },
+    {
+    "tier": 2,
+    "min": 16,
+    "max": 89,
+    "rebate": 0.02 
+  },
+  {
+    "tier": 3,
+    "min": 90,
+    "max": 1000,
+    "rebate": 0.023
+  }
+]
+}
+  ]
 }

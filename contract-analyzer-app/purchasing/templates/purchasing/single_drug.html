@@ -11,9 +11,10 @@
 {% endblock %}
 
 {% block body %}
+<a href="{% url 'home' %}" class="waves-effect waves-light teal-text white-text btn"><i class="material-icons left">home</i></a>
 <div class="container" style="text-align:center;">
-<h1 style="text-decoration: underline;font-weight: bold;">{{ single_drug.name }}</h1>
-<h1>({{ single_drug.route_type }})</h1>
+<h2 style="text-decoration: underline;font-weight: bold;">{{ single_drug.name }}</h2>
+<h4>- {{ single_drug.route_type }} -</h4>
     <table class="responsive-table" style="font-size: 30px;">
         <thead>
             <tr>
@@ -33,7 +34,7 @@
                 <td>{{ q4_contract_qty|floatformat:2 }}</td>
             </tr>
             <tr>
-                <td>Total $:</td>
+                <td>Purchases:</td>
                 <td>{{ q1_purchases|currency }}</td>
                 <td>{{ q2_purchases|currency }}</td>
                 <td>{{ q3_purchases|currency }}</td>
@@ -41,46 +42,34 @@
             </tr>
             <tr>
                 <td>Rebate %:</td>
-                <td>{% get_rebate_pct volume_tiers q1_contract_qty %}</td>
-                <td>{% get_rebate_pct volume_tiers q2_contract_qty %}</td>
-                <td>{% get_rebate_pct volume_tiers q3_contract_qty %}</td>
-                <td>{% get_rebate_pct volume_tiers q4_contract_qty %}</td>
+                <td>{% get_volume_rebate_pct volume_tiers q1_contract_qty %}</td>
+                <td>{% get_volume_rebate_pct volume_tiers q2_contract_qty %}</td>
+                <td>{% get_volume_rebate_pct volume_tiers q3_contract_qty %}</td>
+                <td>{% get_volume_rebate_pct volume_tiers q4_contract_qty %}</td>
             </tr>
             <tr>
-                <td>Rebate Amount:</td>
-                <td>${% get_rebate_amt volume_tiers q1_contract_qty q1_purchases %}</td>
-                <td>${% get_rebate_amt volume_tiers q2_contract_qty q2_purchases %}</td>
-                <td>${% get_rebate_amt volume_tiers q3_contract_qty q3_purchases %}</td>
-                <td>${% get_rebate_amt volume_tiers q4_contract_qty q4_purchases %}</td>
+                <td>Rebates:</td>
+                <td>{% get_rebate_amt volume_tiers q1_contract_qty q1_purchases %}</td>
+                <td>{% get_rebate_amt volume_tiers q2_contract_qty q2_purchases %}</td>
+                <td>{% get_rebate_amt volume_tiers q3_contract_qty q3_purchases %}</td>
+                <td>{% get_rebate_amt volume_tiers q4_contract_qty q4_purchases %}</td>
             </tr>
         </tbody>
     </table>
 
     <div class="row">
         {% for ndc in ndc_list %}
-        <div class="col s4">
-            {% if single_drug.route_type == 'IV' %}
-            <div class="card med blue-grey darken-1">
-                <div class="card-content white-text" style="font-size: 20px;">
-            {% else %}
-            <div class="card med red darken-1">
-                <div class="card-content black-text" style="font-size: 20px;">
-            {% endif %}
-                    <span class="card-title" style="font-weight: bold;font-size: 24px;">NDC: {{ ndc.ndc_code }}</span>
-                    <p>Strength: {{ ndc.numerator_strength }}</p>
-                    <p>HCPCS Code: {{ ndc.hcpcs_code }}</p>
-                    <p>MBU: {{ ndc.cpt_mbu }}</p>
-                    <p>Package Qty: {{ ndc.package_qty }}</p>
-                    <h3 style="text-decoration: underline;font-weight: bold;font-size: 20px;">Latest Prices:</h3>
-                    <p>(As of {{ ndc.latest_claim.invoice_date }})</p>
-                    <p>NDC Price: {{ ndc.latest_price|currency }}</p>
-                    <p>BU Price: {{ ndc.latest_billing_unit_price|currency }}</p>
-                </div>
+        <div class="col s6">
+            <div class="card med {% if single_drug.route_type == 'IV' %} blue-grey darken-1 card-content white-text {% else %} red darken-1 card-content black-text {% endif %} no-padding no-padding-bottom">
+                <span class="card-title" style="font-weight: bold;font-size: 20px;">NDC: {{ ndc.ndc_code }}</span>
+                <p>Strength: {{ ndc.numerator_strength }}</p>
+                <h4 style="text-decoration: underline;font-weight: bold;font-size: 20px;">Latest Prices:</h4>
+                <p>(As of {{ ndc.latest_claim.invoice_date }})</p>
+                <p>NDC Price: {{ ndc.latest_price|currency }}</p>
+                <p>BU Price: {{ ndc.latest_billing_unit_price|currency }}</p>
             </div>
-                </div>
-            </div>
-        {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 
